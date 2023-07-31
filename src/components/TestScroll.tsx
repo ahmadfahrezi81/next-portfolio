@@ -35,7 +35,7 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
      * have to replace for wrapping that works for you or dynamically
      * calculate
      */
-    const x = useTransform(baseX, (v) => `${wrap(20, -20, v)}%`);
+    const x = useTransform(baseX, (v) => `${wrap(0, 20, v)}%`);
 
     const directionFactor = useRef<number>(1);
     useAnimationFrame((t, delta) => {
@@ -67,11 +67,6 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
         <div className="parallax">
             <motion.div className="scroller" style={{ x }}>
                 <span>{children} </span>
-                <span>{children} </span>
-                <span>{children} </span>
-                <span>{children} </span>
-                <span>{children} </span>
-                <span>{children} </span>
             </motion.div>
         </div>
     );
@@ -79,10 +74,13 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
 
 export default function TestScroll() {
     return (
-        <section className="bg-slate-100">
-            <ParallaxText baseVelocity={-5}>Framer Motion</ParallaxText>
-            <ParallaxText baseVelocity={6}>Framer Motion</ParallaxText>
-            <ParallaxText baseVelocity={-3}>Framer Motion</ParallaxText>
+        <section className="bg-slate-100 w-full">
+            <ParallaxText baseVelocity={5}>
+                Framer Motion Framer Motion Framer Motion Framer Motion Framer
+                Motion
+            </ParallaxText>
+            {/* <ParallaxText baseVelocity={6}>Framer Motion</ParallaxText>
+            <ParallaxText baseVelocity={-3}>Framer Motion</ParallaxText> */}
         </section>
     );
 }

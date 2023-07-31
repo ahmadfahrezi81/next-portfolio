@@ -1,5 +1,6 @@
 import Paragraph from "@/ui/Paragraph";
 import LargeHeading from "@/ui/LargeHeading";
+import { Motion } from "@/components/Motion";
 
 export default function Home() {
     return (

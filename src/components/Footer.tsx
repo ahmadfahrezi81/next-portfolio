@@ -16,7 +16,7 @@ function Footer() {
                 </div>
                 <Image
                     className="rounded"
-                    src="/footerAnimation.gif"
+                    src="/animation.gif"
                     width={300}
                     height={50}
                     alt="Animated GIF"

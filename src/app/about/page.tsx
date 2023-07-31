@@ -4,6 +4,7 @@ import Link from "next/link";
 import React from "react";
 import TestScroll from "@/components/TestScroll";
 import { motion } from "framer-motion";
+import Test from "@/components/Test";
 
 export default function page() {
     return (
@@ -12,7 +13,7 @@ export default function page() {
             <section>
                 <div>Image</div>
                 <LargeHeading size="sm">
-                    Full Stack Develper and Designer
+                    Full Stack Developer and Designer
                 </LargeHeading>
                 <Paragraph>
                     Lorem ipsum dolor sit amet consectetur. Tortor tellus tempor
