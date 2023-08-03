@@ -2,7 +2,7 @@ import * as React from "react";
 import { cva, VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
-const paragraphVariants = cva(" text-slate-700 dark:text-slate-300 mb-2", {
+const paragraphVariants = cva("text-custom-white mb-2", {
     variants: {
         size: {
             default: "text-base sm:text-lg",

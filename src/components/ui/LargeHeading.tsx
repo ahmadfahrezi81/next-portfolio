@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 
 const headingVariants = cva(
-    "text-black dark:text-white font-extrabold leading-tight tracking-tighter",
+    "text-custom-white dark:text-white font-extrabold leading-tight tracking-tighter",
     {
         variants: {
             size: {
@@ -35,23 +35,23 @@ interface LargeHeadingProps
 const LargeHeading = React.forwardRef<HTMLHeadingElement, LargeHeadingProps>(
     ({ className, size, align, children, ...props }, ref) => {
         return (
-            <motion.div
-                animate={{ rotate: 360 }}
-                transition={{
-                    type: "spring",
-                    damping: 10,
-                    mass: 0.75,
-                    stiffness: 100,
-                }}
+            // <motion.div
+            //     animate={{ rotate: 360 }}
+            //     transition={{
+            //         type: "spring",
+            //         damping: 10,
+            //         mass: 0.75,
+            //         stiffness: 100,
+            //     }}
+            // >
+            <h1
+                ref={ref}
+                {...props}
+                className={cn(headingVariants({ size, align, className }))}
             >
-                <h1
-                    ref={ref}
-                    {...props}
-                    className={cn(headingVariants({ size, align, className }))}
-                >
-                    {children}
-                </h1>
-            </motion.div>
+                {children}
+            </h1>
+            // </motion.div>
         );
     }
 );

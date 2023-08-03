@@ -3,12 +3,12 @@
 import { useEffect } from "react";
 import { Crisp } from "crisp-sdk-web";
 
-const CrispChat = () => {
+const CrispChatWrapper = ({ children }: any) => {
     useEffect(() => {
         Crisp.configure("1bc9ab6c-97cc-456b-9e04-5f40fe659157");
 
         Crisp.chat.hide();
-    });
+    }, []);
 
     const handleClick = () => {
         if (Crisp.chat.isChatOpened()) {
@@ -22,9 +22,17 @@ const CrispChat = () => {
 
     return (
         <>
-            <button onClick={handleClick}>Contact</button>
+            <div onClick={handleClick} className="pointer w-fit">
+                {children}
+            </div>
+            {/* <button
+                className="block hover:bg-black hover:bg-opacity-20  px-4 py-2 rounded-lg"
+                onClick={handleClick}
+            > */}
+
+            {/* </button> */}
         </>
     );
 };
 
-export default CrispChat;
+export default CrispChatWrapper;
