@@ -6,7 +6,6 @@ import Image from "next/image";
 import Icons from "@/components/Icons";
 import { Button } from "@/ui/button";
 import CrispChatWrapper from "@/components/CrispChatWrapper";
-import TailwindGridExample from "@/components/TailwindCard";
 
 async function getData() {
     const client = createClient({
@@ -16,7 +15,7 @@ async function getData() {
 
     const res = await client.getEntries({
         content_type: "project",
-        order: "sys.createdAt",
+        order: ["sys.createdAt"],
     });
 
     return res.items;
