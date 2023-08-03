@@ -144,7 +144,7 @@ function Footer() {
                 <motion.button whileTap={{ scale: 0.9 }}>
                     <Link href="/">
                         <Image
-                            src="/logo.svg"
+                            src="./logo.svg"
                             height={30}
                             width={30}
                             alt="logo"

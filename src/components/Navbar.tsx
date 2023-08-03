@@ -14,7 +14,7 @@ function Navbar() {
                 <Link href="/">
                     <Image
                         className="rsm:hidden"
-                        src="/logo.svg"
+                        src="./logo.svg"
                         height={40}
                         width={40}
                         alt="logo"
