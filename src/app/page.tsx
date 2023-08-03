@@ -16,6 +16,7 @@ async function getData() {
 
     const res = await client.getEntries({
         content_type: "project",
+        order: "sys.createdAt",
     });
 
     return res.items;
@@ -44,11 +45,15 @@ export default async function Home() {
             <section className="mt-20 flex flex-col gap-10">
                 {/* hero main */}
                 <Link href={`/projects/${data[0].fields.slug}`}>
-                    <div className=" rounded-2xl bg-[#787A91] bg-opacity-20 p-12 pb-0 rsm:p-7 rsm:pb-0">
-                        <Paragraph align="center" className="mb-0">
+                    <div className=" rounded-2xl bg-[#787A91] bg-opacity-20 p-12 pb-0 rlg:p-10 rlg:pb-0  rsm:p-7 rsm:pb-0">
+                        <Paragraph align="left" className="mb-0">
                             {data[0].fields.location}
                         </Paragraph>
-                        <LargeHeading align="center" size="md" className="mb-8">
+                        <LargeHeading
+                            align="left"
+                            size="md"
+                            className="mb-8 rlg:mb-4"
+                        >
                             {data[0].fields.title}
                         </LargeHeading>
                         <Image
@@ -62,57 +67,59 @@ export default async function Home() {
                         />
                     </div>
                 </Link>
-                <div className="flex gap-10">
+                <div className="flex flex-row gap-10 w-full rsm:flex-col">
                     {/* hero 1 */}
-                    <Link href={`/projects/${data[0].fields.slug}`}>
+                    <Link href={`/projects/${data[1].fields.slug}`}>
                         <div
-                            className=" rounded-2xl bg-[#787A91] bg-opacity-20 p-12 pb-0 pr-0
-                         rsm:p-7 rsm:pb-0"
+                            className="w-full flex-1 rounded-2xl bg-[#787A91] bg-opacity-20 p-12 pb-0 pr-0 rlg:p-10 rlg:pb-0 rlg:pr-0 
+                        rsm:p-7 rsm:pb-0 rsm:pr-0"
                         >
                             <Paragraph align="left" className="mb-0">
-                                {data[0].fields.location}
+                                {data[1].fields.location}
                             </Paragraph>
                             <LargeHeading
                                 align="left"
                                 size="md"
                                 className="mb-8"
                             >
-                                {data[0].fields.title}
+                                {data[1].fields.title}
                             </LargeHeading>
                             <Image
+                                className="rounded-br-2xl"
                                 src={
                                     "https:" +
-                                    data[0].fields.thumbnail.fields.file.url
+                                    data[1].fields.thumbnail.fields.file.url
                                 }
-                                width={1200}
-                                height={400}
+                                width={600}
+                                height={600}
                                 alt="test"
                             />
                         </div>
                     </Link>
                     {/* hero 2 */}
-                    <Link href={`/projects/${data[0].fields.slug}`}>
+                    <Link href={`/projects/${data[2].fields.slug}`}>
                         <div
-                            className=" rounded-2xl bg-[#787A91] bg-opacity-20 p-12 pb-0 pr-0
-                        rsm:p-7 rsm:pb-0"
+                            className="w-full rounded-2xl bg-[#787A91] bg-opacity-20 p-12 pb-0 pr-0 rlg:p-10 rlg:pb-0 rlg:pr-0
+                        rsm:p-7 rsm:pb-0 rsm:pr-0"
                         >
                             <Paragraph align="left" className="mb-0">
-                                {data[0].fields.location}
+                                {data[2].fields.location}
                             </Paragraph>
                             <LargeHeading
                                 align="left"
                                 size="md"
                                 className="mb-8"
                             >
-                                {data[0].fields.title}
+                                {data[2].fields.title}
                             </LargeHeading>
                             <Image
+                                className="rounded-br-2xl"
                                 src={
                                     "https:" +
-                                    data[0].fields.thumbnail.fields.file.url
+                                    data[2].fields.thumbnail.fields.file.url
                                 }
-                                width={1200}
-                                height={400}
+                                width={600}
+                                height={600}
                                 alt="test"
                             />
                         </div>
