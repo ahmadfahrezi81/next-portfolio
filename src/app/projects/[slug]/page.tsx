@@ -34,7 +34,7 @@ export default async function page({ params }: pageProps) {
                 <LargeHeading className="mb-2">
                     {data.fields.title}
                 </LargeHeading>
-                <Paragraph>
+                <Paragraph className="w-full">
                     {data.fields.location} | {data.fields.developmentTypes} |{" "}
                     {data.fields.year}
                 </Paragraph>

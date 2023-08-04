@@ -85,9 +85,9 @@ export default async function Home() {
                 </Paragraph>
                 {/* <div className="flex flex-row gap-6 w-full rsm:flex-col"> */}
                 <div className="grid grid-cols-3 gap-8 rlg:grid-cols-2 rsm:grid-cols-1">
-                    <HeroCard data={data[1].fields} />
-                    <HeroCard data={data[2].fields} />
-                    <HeroCard data={data[2].fields} />
+                    <HeroCard data={data[3].fields} />
+                    <HeroCard data={data[4].fields} />
+                    <HeroCard data={data[5].fields} />
                 </div>
                 <Link href="/projects">
                     <Button className="mt-6 text-sm">
