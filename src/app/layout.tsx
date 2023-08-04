@@ -29,7 +29,7 @@ export default function RootLayout({
             >
                 <Navbar />
 
-                <section className="mt-24"> {children}</section>
+                <section className="mt-24 rsm:mt-12"> {children}</section>
 
                 {/* <CrispWithNoSSR /> */}
 

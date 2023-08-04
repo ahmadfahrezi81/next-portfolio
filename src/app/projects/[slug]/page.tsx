@@ -32,35 +32,46 @@ export default async function page({ params }: pageProps) {
 
     return (
         <>
-            <section>
-                <LargeHeading>{data.fields.title}</LargeHeading>
+            <section className="flex flex-col items-center">
+                <LargeHeading className="mb-2">
+                    {data.fields.title}
+                </LargeHeading>
                 <Paragraph>
-                    {data.fields.location} • {data.fields.developmentTypes}•
+                    {data.fields.location} | {data.fields.developmentTypes} |{" "}
                     {data.fields.year}
                 </Paragraph>
                 <Paragraph>
                     {data.fields.techStack.map((item: string, i: number) => (
                         <span key={i}>
-                            {item}{" "}
+                            {" "}
+                            {item}
                             {i !== data.fields.techStack.length - 1 && " • "}
                         </span>
                     ))}
                 </Paragraph>
-                <Image
-                    src={"https:" + data.fields.featureImage.fields.file.url}
-                    width={
-                        data.fields.featureImage.fields.file.details.image.width
-                    }
-                    height={
-                        data.fields.featureImage.fields.file.details.image
-                            .height
-                    }
-                    alt="he"
-                />
+                <div className="lg:p-16 lg:pb-0 rlg:p-10 rlg:pb-0 rsm:p-0 mt-10 rsm:mt-5 bg-[#787A91] bg-opacity-20 rounded-2xl">
+                    <Image
+                        src={
+                            "https:" + data.fields.featureImage.fields.file.url
+                        }
+                        width={
+                            data.fields.featureImage.fields.file.details.image
+                                .width
+                        }
+                        height={
+                            data.fields.featureImage.fields.file.details.image
+                                .height
+                        }
+                        alt="Feature Image"
+                        className="rounded-lg rounded-b-none rsm:rounded"
+                    />
+                </div>
             </section>
 
             <section>
-                <LargeHeading size="sm">More about the project.</LargeHeading>
+                <LargeHeading size="md" className="mt-[5rem] mb-5">
+                    More about the project.
+                </LargeHeading>
                 <Paragraph>{data.fields.descriptions}</Paragraph>
                 {data.fields.imageTiles.map((item: any, i: number) => (
                     <Image

@@ -30,7 +30,7 @@ function Footer() {
                 {/* <div className="p-6 flex rsm:flex-col gap-10 bg-[#787A91] bg-opacity-40 rounded-2xl justify-between"> */}
                 <div
                     className="p-16 w-full bg-[#787A91] bg-opacity-20 rounded-2xl 
-                flex flex-col gap-7 justify-center rsm:items-center rsm:p-10 relative"
+                flex flex-col gap-7 justify-center rmd:items-center rsm:p-10 relative"
                 >
                     <LargeHeading align="left" className="rsm:text-center">
                         Let&apos;s chat.
@@ -39,7 +39,7 @@ function Footer() {
                         className="text-white absolute rmd:hidden top-16 right-14"
                         size={45}
                     />
-                    <Paragraph align="left" className="rsm:text-center">
+                    <Paragraph align="left" className="rmd:text-center">
                         Have an exciting project in mind or just want to talk?
                         <br className="rsm:hidden" /> Feel free to say hi!
                     </Paragraph>
