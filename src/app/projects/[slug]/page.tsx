@@ -49,7 +49,7 @@ export default async function page({ params }: pageProps) {
                         </span>
                     ))}
                 </Paragraph>
-                <div className="lg:p-16 lg:pb-0 rlg:p-10 rlg:pb-0 rsm:p-0 mt-10 rsm:mt-5 bg-[#787A91] bg-opacity-20 rounded-2xl">
+                <div className="w-full lg:p-16 lg:pb-0 rlg:p-10 rlg:pb-0 rsm:p-3 rsm:pb-0 mt-10 rsm:mt-5 bg-[#787A91] bg-opacity-20 rounded-2xl rsm:rounded">
                     <Image
                         src={
                             "https:" + data.fields.featureImage.fields.file.url
@@ -63,25 +63,30 @@ export default async function page({ params }: pageProps) {
                                 .height
                         }
                         alt="Feature Image"
-                        className="rounded-lg rounded-b-none rsm:rounded"
+                        className="rounded-lg rounded-b-none rsm:rounded w-full"
                     />
                 </div>
             </section>
 
-            <section>
+            <section className="flex flex-col items-center">
                 <LargeHeading size="md" className="mt-[5rem] mb-5">
                     More about the project.
                 </LargeHeading>
-                <Paragraph>{data.fields.descriptions}</Paragraph>
-                {data.fields.imageTiles.map((item: any, i: number) => (
-                    <Image
-                        key={i}
-                        src={"https:" + item.fields.file.url}
-                        width={item.fields.file.details.image.width}
-                        height={item.fields.file.details.image.height}
-                        alt="he"
-                    />
-                ))}
+                <Paragraph className="mb-10 max-w-[500px]" align="center">
+                    {data.fields.descriptions}
+                </Paragraph>
+                <div className="grid grid-cols-2 gap-6 rsm:grid-cols-1 w-full bg-[#787A91] bg-opacity-20 lg:p-16 p-10 rsm:p-3 rsm:gap-3 rounded-2xl">
+                    {data.fields.imageTiles.map((item: any, i: number) => (
+                        <Image
+                            key={i}
+                            src={"https:" + item.fields.file.url}
+                            width={item.fields.file.details.image.width}
+                            height={item.fields.file.details.image.height}
+                            alt="image"
+                            className="w-full rounded-lg"
+                        />
+                    ))}
+                </div>
             </section>
         </>
     );
