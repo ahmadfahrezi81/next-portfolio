@@ -6,6 +6,7 @@ import Link from "next/link";
 import CrispChat from "./CrispChatWrapper";
 import Image from "next/image";
 import CrispChatWrapper from "./CrispChatWrapper";
+import Logo from "@/public/Logo.svg";
 
 function Navbar() {
     return (
@@ -14,7 +15,7 @@ function Navbar() {
                 <Link href="/">
                     <Image
                         className="rsm:hidden"
-                        src="./logo.svg"
+                        src={Logo}
                         height={40}
                         width={40}
                         alt="logo"
@@ -25,7 +26,7 @@ function Navbar() {
             {/* <Motion /> */}
 
             <div
-                className="rsm:text-custom-white rsm:bg-transparent rsm:p-0 flex rsm:justify-between rsm:w-[380px]
+                className="flex rsm:justify-between rsm:p-2 rsm:w-[380px]
             w-fit items-center sm:gap-5 bg-[#787A91] bg-opacity-30 text-custom-white px-10 py-3 rounded-xl"
             >
                 <Link href="/">

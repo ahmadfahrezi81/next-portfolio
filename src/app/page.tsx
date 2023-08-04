@@ -26,7 +26,7 @@ export default async function Home() {
 
     return (
         <>
-            <section className="flex flex-col items-center mt-20">
+            <section className="flex flex-col items-center">
                 <LargeHeading className="mb-4">
                     Hi. I&apos;m Ahmad.
                     <br />A Dev. and Designer
@@ -112,7 +112,7 @@ export default async function Home() {
                                 {data[2].fields.title}
                             </LargeHeading>
                             <Image
-                                className="rounded-br-2xl"
+                                className="rounded-br-2xl rounded-tl-xl"
                                 src={
                                     "https:" +
                                     data[2].fields.thumbnail.fields.file.url
@@ -126,7 +126,9 @@ export default async function Home() {
                 </div>
             </section>
             <section>
-                <LargeHeading>Notable Projects.</LargeHeading>
+                <LargeHeading className="mt-[5rem] mb-6">
+                    Notable Projects.
+                </LargeHeading>
                 <Paragraph>
                     Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor
                     sit amet consectetur ipsum dolor sit amet consectetur.

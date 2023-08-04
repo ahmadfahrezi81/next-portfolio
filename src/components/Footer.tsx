@@ -11,6 +11,7 @@ import { Button } from "@/ui/button";
 import Input from "@/ui/Input";
 import { useState } from "react";
 import { toast } from "@/ui/Toast";
+import Logo from "@/public/Logo.svg";
 
 const email = "ahmadfahrezi8127@gmail.com";
 
@@ -88,7 +89,7 @@ function Footer() {
                         </Link>
                         <Link
                             className="cursor-pointer md:hidden block hover:bg-black hover:bg-opacity-20 px-2 py-2 rounded-lg"
-                            href="https://www.linkedin.com/in/ahmadfahrezi/"
+                            href={`mailto:${email}`}
                             target="_blank"
                         >
                             <Icons.mail />
@@ -143,12 +144,7 @@ function Footer() {
             <div className="flex rsm:flex-col gap-4 justify-between items-center text-custom-white mt-7">
                 <motion.button whileTap={{ scale: 0.9 }}>
                     <Link href="/">
-                        <Image
-                            src="./logo.svg"
-                            height={30}
-                            width={30}
-                            alt="logo"
-                        />
+                        <Image src={Logo} height={30} width={30} alt="logo" />
                     </Link>
                 </motion.button>
                 <span className="text-sm">

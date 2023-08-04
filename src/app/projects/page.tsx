@@ -114,7 +114,7 @@ export default async function page() {
                                     )
                                 )}
                             </TableCell>
-                            <TableCell className="rsm:hidden pl-6">
+                            <TableCell className=" pl-6">
                                 {item.fields.links.github ? (
                                     <Link
                                         className="m-1 w-fit"

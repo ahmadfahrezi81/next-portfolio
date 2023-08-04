@@ -7,6 +7,8 @@ import { motion } from "framer-motion";
 import Test from "@/components/Test";
 import Icons from "@/components/Icons";
 import { createClient } from "contentful";
+import Image from "next/image";
+import Profile from "@/public/Profile.png";
 
 async function getData() {
     const client = createClient({
@@ -27,20 +29,40 @@ export default async function page() {
     return (
         <>
             <LargeHeading>Hi. I&apos;m Ahmad.</LargeHeading>
-            <section>
-                <div>Image</div>
-                <LargeHeading size="sm">
-                    Full Stack Developer and Designer
-                </LargeHeading>
-                <Paragraph>
-                    Lorem ipsum dolor sit amet consectetur. Tortor tellus tempor
-                    ligula nisl fames sagittis. Cursus lacinia quis fusce quis
-                    cras hendrerit ac. Mus sodales ut porttitor cras ac amet
-                    maecenas ultricies.
-                </Paragraph>
+            <section className="flex rsm:flex-col items-center gap-12 mt-10 sm:gap-28 sm:justify-center">
+                <Image
+                    src={Profile}
+                    height={400}
+                    width={350}
+                    alt="Profile Image"
+                    className="bg-blue-100 rounded-t-full rounded-b-xl"
+                />
+                <div className="flex flex-col gap-5">
+                    <LargeHeading
+                        size="md"
+                        align="left"
+                        className="rsm:text-center"
+                    >
+                        Full Stack Developer and Designer
+                    </LargeHeading>
+                    <Paragraph align="left" className="rsm:text-center">
+                        Lorem ipsum dolor sit amet consectetur. Tortor tellus{" "}
+                        <br className="rsm:hidden" />
+                        tempor ligula nisl fames sagittis. Cursus lacinia quis{" "}
+                        <br className="rsm:hidden" />
+                        fusce quis cras hendrerit ac. Mus sodales ut porttitor{" "}
+                        <br className="rsm:hidden" />
+                        cras ac amet maecenas ultricies.
+                    </Paragraph>
+                    <Paragraph align="left" className="rsm:text-center">
+                        Lorem ipsum dolor sit amet consectetur. Tortor tellus{" "}
+                        <br className="rsm:hidden" />
+                        tempor ligula nisl fames sagittis.
+                    </Paragraph>
+                </div>
             </section>
             <section className="flex flex-col items-center">
-                <LargeHeading className="mt-12 mb-6">
+                <LargeHeading className="mt-[5rem] mb-6">
                     Technology so far.
                 </LargeHeading>
                 <Paragraph>
@@ -53,13 +75,13 @@ export default async function page() {
             </section>
 
             <section>
-                <LargeHeading className="mt-12 mb-6">Resume.</LargeHeading>
-                <div className="bg-[#787A91] bg-opacity-20 p-6 rounded-2xl">
+                <LargeHeading className="mt-[5rem] mb-6">Resume.</LargeHeading>
+                <div className="bg-[#787A91] bg-opacity-20 p-6 rsm:p-3 rounded-2xl">
                     <Link
                         href={`https:${data[0].fields.file.url}`}
                         target="_blank"
                     >
-                        <div className="flex justify-between text-custom-white items-center gap-4 p-8 rounded-xl bg-custom-white">
+                        <div className="flex justify-between text-custom-white items-center gap-4 p-8 rsm:p-5 rounded-xl bg-custom-white">
                             <div className="flex gap-4 items-center">
                                 <span className="p-5 rsm:p-3 bg-custom-blue rounded-full">
                                     <Icons.FileText size={25} />
@@ -68,7 +90,7 @@ export default async function page() {
                                 <div className="flex flex-col mt-2">
                                     <Paragraph
                                         align="left"
-                                        className="text-custom-blue"
+                                        className="text-custom-blue mb-0"
                                     >
                                         Resume
                                     </Paragraph>
