@@ -6,6 +6,7 @@ import Image from "next/image";
 import Icons from "@/components/Icons";
 import { Button } from "@/ui/button";
 import CrispChatWrapper from "@/components/CrispChatWrapper";
+import HeroCard from "@/components/HeroCard";
 
 async function getData() {
     const client = createClient({
@@ -41,7 +42,7 @@ export default async function Home() {
                     </Button>
                 </CrispChatWrapper>
             </section>
-            <section className="mt-20 flex flex-col gap-10">
+            <section className="mt-20 flex flex-col gap-8">
                 {/* hero main */}
                 <Link href={`/projects/${data[0].fields.slug}`}>
                     <div className=" rounded-2xl bg-[#787A91] bg-opacity-20 p-12 pb-0 rlg:p-10 rlg:pb-0  rsm:p-7 rsm:pb-0">
@@ -66,73 +67,28 @@ export default async function Home() {
                         />
                     </div>
                 </Link>
-                <div className="flex flex-row gap-10 w-full rsm:flex-col">
+                <div className="flex flex-row gap-8 w-full rsm:flex-col">
                     {/* hero 1 */}
-                    <Link href={`/projects/${data[1].fields.slug}`}>
-                        <div
-                            className="w-full flex-1 rounded-2xl bg-[#787A91] bg-opacity-20 p-12 pb-0 pr-0 rlg:p-10 rlg:pb-0 rlg:pr-0 
-                        rsm:p-7 rsm:pb-0 rsm:pr-0"
-                        >
-                            <Paragraph align="left" className="mb-0">
-                                {data[1].fields.location}
-                            </Paragraph>
-                            <LargeHeading
-                                align="left"
-                                size="md"
-                                className="mb-8"
-                            >
-                                {data[1].fields.title}
-                            </LargeHeading>
-                            <Image
-                                className="rounded-br-2xl"
-                                src={
-                                    "https:" +
-                                    data[1].fields.thumbnail.fields.file.url
-                                }
-                                width={600}
-                                height={600}
-                                alt="test"
-                            />
-                        </div>
-                    </Link>
+                    <HeroCard data={data[1].fields} />
+
                     {/* hero 2 */}
-                    <Link href={`/projects/${data[2].fields.slug}`}>
-                        <div
-                            className="w-full rounded-2xl bg-[#787A91] bg-opacity-20 p-12 pb-0 pr-0 rlg:p-10 rlg:pb-0 rlg:pr-0
-                        rsm:p-7 rsm:pb-0 rsm:pr-0"
-                        >
-                            <Paragraph align="left" className="mb-0">
-                                {data[2].fields.location}
-                            </Paragraph>
-                            <LargeHeading
-                                align="left"
-                                size="md"
-                                className="mb-8"
-                            >
-                                {data[2].fields.title}
-                            </LargeHeading>
-                            <Image
-                                className="rounded-br-2xl rounded-tl-xl"
-                                src={
-                                    "https:" +
-                                    data[2].fields.thumbnail.fields.file.url
-                                }
-                                width={600}
-                                height={600}
-                                alt="test"
-                            />
-                        </div>
-                    </Link>
+                    <HeroCard data={data[2].fields} />
                 </div>
             </section>
             <section>
                 <LargeHeading className="mt-[5rem] mb-6">
                     Notable Projects.
                 </LargeHeading>
-                <Paragraph>
+                <Paragraph className="mb-10">
                     Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor
                     sit amet consectetur ipsum dolor sit amet consectetur.
                 </Paragraph>
+                {/* <div className="flex flex-row gap-6 w-full rsm:flex-col"> */}
+                <div className="grid grid-cols-3 gap-8 rlg:grid-cols-2 rsm:grid-cols-1">
+                    <HeroCard data={data[1].fields} />
+                    <HeroCard data={data[2].fields} />
+                    <HeroCard data={data[2].fields} />
+                </div>
             </section>
         </>
     );
