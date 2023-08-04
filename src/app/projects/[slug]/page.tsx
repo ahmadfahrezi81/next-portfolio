@@ -28,8 +28,6 @@ async function getProject(params: any) {
 export default async function page({ params }: pageProps) {
     const data: any = await getProject(params);
 
-    console.log("data :", data);
-
     return (
         <>
             <section className="flex flex-col items-center">
@@ -40,7 +38,7 @@ export default async function page({ params }: pageProps) {
                     {data.fields.location} | {data.fields.developmentTypes} |{" "}
                     {data.fields.year}
                 </Paragraph>
-                <Paragraph>
+                <Paragraph className="w-full">
                     {data.fields.techStack.map((item: string, i: number) => (
                         <span key={i}>
                             {" "}

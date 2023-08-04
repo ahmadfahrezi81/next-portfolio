@@ -75,7 +75,7 @@ export default async function Home() {
                     <HeroCard data={data[2].fields} />
                 </div>
             </section>
-            <section>
+            <section className="flex flex-col items-center">
                 <LargeHeading className="mt-[5rem] mb-6">
                     Notable Projects.
                 </LargeHeading>
@@ -89,6 +89,12 @@ export default async function Home() {
                     <HeroCard data={data[2].fields} />
                     <HeroCard data={data[2].fields} />
                 </div>
+                <Link href="/projects">
+                    <Button className="mt-6 text-sm">
+                        View Full Project Archive
+                        <Icons.ArrowRight className="ml-2" size={16} />
+                    </Button>
+                </Link>
             </section>
         </>
     );
