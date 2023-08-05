@@ -3,7 +3,7 @@
 import * as React from "react";
 import { cva, VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
-import { motion } from "framer-motion";
+import FallingWrapper from "@/components/OnLoadWrapperAnimate";
 
 const headingVariants = cva(
     "text-custom-white dark:text-white font-extrabold leading-tight tracking-tighter",
@@ -44,6 +44,7 @@ const LargeHeading = React.forwardRef<HTMLHeadingElement, LargeHeadingProps>(
             //         stiffness: 100,
             //     }}
             // >
+
             <h1
                 ref={ref}
                 {...props}
@@ -51,6 +52,7 @@ const LargeHeading = React.forwardRef<HTMLHeadingElement, LargeHeadingProps>(
             >
                 {children}
             </h1>
+
             // </motion.div>
         );
     }

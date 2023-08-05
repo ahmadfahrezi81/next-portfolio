@@ -7,6 +7,7 @@ import dynamic from "next/dynamic";
 import { Suspense } from "react";
 import Loading from "@/components/loading";
 import Head from "next/head";
+import { Toaster } from "@/components/ui/Toast";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,6 +31,8 @@ export default function RootLayout({
                 <Navbar />
 
                 <section className="mt-24 rsm:mt-12"> {children}</section>
+
+                <Toaster position="bottom-right" />
 
                 {/* <CrispWithNoSSR /> */}
 

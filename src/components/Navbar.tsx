@@ -3,10 +3,10 @@
 import { motion } from "framer-motion";
 
 import Link from "next/link";
-import CrispChat from "./CrispChatWrapper";
 import Image from "next/image";
 import CrispChatWrapper from "./CrispChatWrapper";
 import Logo from "@/public/Logo.svg";
+import PressedWrapperAnimate from "@/components/PressedWrapperAnimate";
 
 function Navbar() {
     return (
@@ -29,37 +29,43 @@ function Navbar() {
                 className="flex rsm:justify-between rsm:p-2 rsm:w-[380px]
             w-fit items-center sm:gap-5 bg-[#787A91] bg-opacity-30 text-custom-white px-10 py-3 rounded-xl"
             >
-                <Link href="/">
-                    <motion.button
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.9 }}
+                <PressedWrapperAnimate>
+                    <Link
+                        href="/"
                         className="hover:bg-black hover:bg-opacity-20 px-4 py-2 rounded-lg"
                     >
                         Home
-                    </motion.button>
-                </Link>
+                    </Link>
+                </PressedWrapperAnimate>
 
-                <Link
-                    className="block hover:bg-black hover:bg-opacity-20 px-4 py-2 rounded-lg"
-                    href="/projects"
-                >
-                    Projects
-                </Link>
-                <Link
-                    className="hover:bg-black hover:bg-opacity-20  px-4 py-2 rounded-lg"
-                    href="/about"
-                >
-                    About
-                </Link>
+                <PressedWrapperAnimate>
+                    <Link
+                        className="block hover:bg-black hover:bg-opacity-20 px-4 py-2 rounded-lg"
+                        href="/projects"
+                    >
+                        Projects
+                    </Link>
+                </PressedWrapperAnimate>
 
-                <CrispChatWrapper>
+                <PressedWrapperAnimate>
                     <Link
                         className="hover:bg-black hover:bg-opacity-20  px-4 py-2 rounded-lg"
-                        href="#"
+                        href="/about"
                     >
-                        Contact
+                        About
                     </Link>
-                </CrispChatWrapper>
+                </PressedWrapperAnimate>
+
+                <PressedWrapperAnimate>
+                    <CrispChatWrapper>
+                        <Link
+                            className="hover:bg-black hover:bg-opacity-20  px-4 py-2 rounded-lg"
+                            href="#"
+                        >
+                            Contact
+                        </Link>
+                    </CrispChatWrapper>
+                </PressedWrapperAnimate>
             </div>
         </nav>
     );

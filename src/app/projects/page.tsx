@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/table";
 import Link from "next/link";
 import Icons from "@/components/Icons";
+import FallingWrapper from "@/components/OnLoadWrapperAnimate";
 
 const invoices = [
     {
@@ -79,67 +80,79 @@ export default async function page() {
 
     return (
         <>
-            <LargeHeading className="mb-5">All Projects.</LargeHeading>
-            <Paragraph className="mb-10">
-                Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit
-                amet <br className="rsm:hidden" /> consectetur ipsum dolor sit
-                amet consectetur.
-            </Paragraph>
-            <Table>
-                <TableHeader>
-                    <TableRow>
-                        <TableHead className="w-[100px]">Year</TableHead>
-                        <TableHead>Name</TableHead>
-                        <TableHead className="rxl:hidden">Made at</TableHead>
-                        <TableHead className="rmd:hidden">Built with</TableHead>
-                        <TableHead className="rsm:hidden">Links</TableHead>
-                    </TableRow>
-                </TableHeader>
-                <TableBody>
-                    {data.map((item: any) => (
-                        <TableRow key={item.sys.id}>
-                            <TableCell>{item.fields.year}</TableCell>
-                            <TableCell>{item.fields.title}</TableCell>
-                            <TableCell className="rxl:hidden">
-                                {item.fields.location}
-                            </TableCell>
-                            <TableCell className="rmd:hidden">
-                                {item.fields.techStack.map(
-                                    (item: string, i: number) => (
-                                        <span
-                                            key={i}
-                                            className="inline-block bg-black m-1 p-2 px-3 bg-opacity-30 rounded-full"
-                                        >
-                                            {item}
-                                        </span>
-                                    )
-                                )}
-                            </TableCell>
-                            <TableCell className=" pl-6">
-                                {item.fields.links.github ? (
-                                    <Link
-                                        className="m-1 w-fit"
-                                        href={item.fields.links.github}
-                                        target="_blank"
-                                    >
-                                        <Icons.github />
-                                    </Link>
-                                ) : null}
+            <FallingWrapper>
+                <LargeHeading className="mb-5">All Projects.</LargeHeading>
+            </FallingWrapper>
 
-                                {item.fields.links.external ? (
-                                    <Link
-                                        className="m-1"
-                                        href={item.fields.links.external}
-                                        target="_blank"
-                                    >
-                                        <Icons.ExternalLink />
-                                    </Link>
-                                ) : null}
-                            </TableCell>
+            <FallingWrapper delay={0.05}>
+                <Paragraph className="mb-10">
+                    Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor
+                    sit amet <br className="rsm:hidden" /> consectetur ipsum
+                    dolor sit amet consectetur.
+                </Paragraph>
+            </FallingWrapper>
+
+            <FallingWrapper delay={0.4}>
+                <Table>
+                    <TableHeader>
+                        <TableRow>
+                            <TableHead className="w-[100px]">Year</TableHead>
+                            <TableHead>Name</TableHead>
+                            <TableHead className="rxl:hidden">
+                                Made at
+                            </TableHead>
+                            <TableHead className="rmd:hidden">
+                                Built with
+                            </TableHead>
+                            <TableHead className="rsm:hidden">Links</TableHead>
                         </TableRow>
-                    ))}
-                </TableBody>
-            </Table>
+                    </TableHeader>
+                    <TableBody>
+                        {data.map((item: any) => (
+                            <TableRow key={item.sys.id}>
+                                <TableCell>{item.fields.year}</TableCell>
+                                <TableCell>{item.fields.title}</TableCell>
+                                <TableCell className="rxl:hidden">
+                                    {item.fields.location}
+                                </TableCell>
+                                <TableCell className="rmd:hidden">
+                                    {item.fields.techStack.map(
+                                        (item: string, i: number) => (
+                                            <span
+                                                key={i}
+                                                className="inline-block bg-black m-1 p-2 px-3 bg-opacity-30 rounded-full"
+                                            >
+                                                {item}
+                                            </span>
+                                        )
+                                    )}
+                                </TableCell>
+                                <TableCell className=" pl-6">
+                                    {item.fields.links.github ? (
+                                        <Link
+                                            className="m-1 w-fit"
+                                            href={item.fields.links.github}
+                                            target="_blank"
+                                        >
+                                            <Icons.github />
+                                        </Link>
+                                    ) : null}
+
+                                    {item.fields.links.external ? (
+                                        <Link
+                                            className="m-1"
+                                            href={item.fields.links.external}
+                                            target="_blank"
+                                        >
+                                            <Icons.ExternalLink />
+                                        </Link>
+                                    ) : null}
+                                </TableCell>
+                            </TableRow>
+                        ))}
+                    </TableBody>
+                </Table>
+            </FallingWrapper>
         </>
     );
 }
