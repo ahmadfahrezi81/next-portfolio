@@ -1,51 +1,83 @@
 "use client";
 
-// import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
+import { useState } from "react";
 
-// export default function TestFramer({ isVisible }: { isVisible: boolean }) {
+// export default function TestFramer() {
 //     return (
 //         <>
-//             <AnimatePresence>
-//                 {isVisible && (
-//                     <motion.div
-//                         className="w-[10rem] h-[10rem] bg-white"
-//                         animate={{ y: -100 }}
-//                         initial={{ opacity: 0 }}
-//                         transition={{ duration: 2 }}
-//                         whileInView={{ opacity: 1, animation: "ease" }}
-//                     />
-//                 )}
-//             </AnimatePresence>
+//             <motion.div
+//                 className="w-[20rem] h-[20rem] bg-white cursor-pointer p-2"
+//                 whileHover={{ y: -10 }}
+//             >
+//                 <motion.div
+//                     className="w-full h-20 bg-blue-400 mt-10"
+//                     whileHover={{ y: 10 }}
+//                     transition={{
+//                         delay: 0.1,
+//                         duration: 0.2,
+//                     }}
+//                 >
+//                     hello
+//                 </motion.div>
+//             </motion.div>
 //         </>
 //     );
 // }
-
-import { AnimatePresence, motion } from "framer-motion";
-import { useState } from "react";
-import { useInView } from "react-intersection-observer";
-
 export default function TestFramer() {
-    const { ref, inView } = useInView({
-        triggerOnce: true,
-        threshold: 0.2,
-    });
+    const [onHover, setOnHover] = useState(false);
 
     return (
         <>
-            <div ref={ref}>
-                <AnimatePresence>
-                    {inView && (
+            <div
+                onMouseEnter={() => {
+                    setOnHover(true);
+                }}
+                onMouseLeave={() => {
+                    setOnHover(false);
+                }}
+            >
+                {onHover ? (
+                    <motion.div
+                        className="w-[20rem] h-[20rem] bg-white cursor-pointer p-2"
+                        animate={{ y: -40 }}
+                        transition={{
+                            delay: 0.1,
+                            duration: 0.2,
+                        }}
+                    >
                         <motion.div
-                            className="w-[15rem] h-[15rem] bg-white"
-                            animate={{ y: 0 }} // Starts at y: 0 (initial position)
-                            initial={{ y: -100, opacity: 0 }} // Falls from y: -100 (above the initial position)
-                            transition={{ duration: 0.8, ease: "easeOut" }}
-                            whileInView={{ opacity: 1 }}
+                            className="w-full h-20 bg-blue-400 mt-10"
+                            animate={{ y: 30 }}
+                            transition={{
+                                delay: 0.1,
+                                duration: 0.4,
+                            }}
                         >
-                            While meeee
+                            hello
                         </motion.div>
-                    )}
-                </AnimatePresence>
+                    </motion.div>
+                ) : (
+                    <motion.div
+                        className="w-[20rem] h-[20rem] bg-white cursor-pointer p-2"
+                        // animate={{ y: -40 }}
+                        // transition={{
+                        //     delay: 0.1,
+                        //     duration: 0.2,
+                        // }}
+                    >
+                        <motion.div
+                            className="w-full h-20 bg-blue-400 mt-10"
+                            // animate={{ y: 30 }}
+                            // transition={{
+                            //     delay: 0.1,
+                            //     duration: 0.4,
+                            // }}
+                        >
+                            hello
+                        </motion.div>
+                    </motion.div>
+                )}
             </div>
         </>
     );

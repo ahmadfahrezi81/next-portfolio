@@ -9,6 +9,7 @@ import CrispChatWrapper from "@/components/CrispChatWrapper";
 import HeroCard from "@/components/HeroCard";
 import FallingWrapper from "@/components/OnLoadWrapperAnimate";
 import PressedWrapperAnimate from "@/components/PressedWrapperAnimate";
+import TestAnimate from "@/components/HeroCardWrapperAnimate";
 
 async function getData() {
     const client = createClient({
@@ -60,29 +61,31 @@ export default async function Home() {
                 <section className="mt-20 flex flex-col gap-8">
                     {/* hero main */}
 
-                    <Link href={`/projects/${data[0].fields.slug}`}>
-                        <div className=" rounded-2xl bg-[#787A91] bg-opacity-20 p-12 pb-0 rlg:p-10 rlg:pb-0  rsm:p-7 rsm:pb-0">
-                            <Paragraph align="left" className="mb-0">
-                                {data[0].fields.location}
-                            </Paragraph>
-                            <LargeHeading
-                                align="left"
-                                size="md"
-                                className="mb-8 rlg:mb-4"
-                            >
-                                {data[0].fields.title}
-                            </LargeHeading>
-                            <Image
-                                src={
-                                    "https:" +
-                                    data[0].fields.thumbnail.fields.file.url
-                                }
-                                width={1200}
-                                height={400}
-                                alt="test"
-                            />
-                        </div>
-                    </Link>
+                    <TestAnimate>
+                        <Link href={`/projects/${data[0].fields.slug}`}>
+                            <div className=" rounded-2xl bg-[#787A91] bg-opacity-20 p-12 pb-0 rlg:p-10 rlg:pb-0  rsm:p-7 rsm:pb-0">
+                                <Paragraph align="left" className="mb-0">
+                                    {data[0].fields.location}
+                                </Paragraph>
+                                <LargeHeading
+                                    align="left"
+                                    size="md"
+                                    className="mb-8 rlg:mb-4"
+                                >
+                                    {data[0].fields.title}
+                                </LargeHeading>
+                                <Image
+                                    src={
+                                        "https:" +
+                                        data[0].fields.thumbnail.fields.file.url
+                                    }
+                                    width={1200}
+                                    height={400}
+                                    alt="card image"
+                                />
+                            </div>
+                        </Link>
+                    </TestAnimate>
 
                     <div className="flex flex-row gap-8 w-full rsm:flex-col">
                         {/* hero 1 */}

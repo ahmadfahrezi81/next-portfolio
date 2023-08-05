@@ -20,8 +20,8 @@ export default function OnLoadWrapperAnimate({
                 <AnimatePresence>
                     {inView && (
                         <motion.div
-                            animate={{ y: 0, opacity: 1 }} // Starts at y: 0 (initial position)
                             initial={{ y: -30, opacity: 0 }} // Falls from y: -100 (above the initial position)
+                            animate={{ y: 0, opacity: 1 }} // Starts at y: 0 (initial position)
                             transition={{
                                 duration: duration,
                                 ease: "linear",
