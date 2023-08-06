@@ -69,7 +69,7 @@ async function getData() {
 
     const res = await client.getEntries({
         content_type: "archive",
-        order: ["-sys.createdAt"],
+        order: ["-fields.year", "-sys.createdAt"],
     });
 
     return res.items;

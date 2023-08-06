@@ -23,7 +23,7 @@ function Footer() {
     return (
         <FallingWrapper delay={0.3}>
             <footer className="mb-10 mt-20">
-                <div className="flex gap-5">
+                <div className="flex gap-5 ">
                     {/* <div className="p-6 flex rsm:flex-col gap-10 bg-[#787A91] bg-opacity-40 rounded-2xl justify-between"> */}
                     <div
                         className="p-16 w-full bg-[#787A91] bg-opacity-20 rounded-2xl 
@@ -53,7 +53,7 @@ function Footer() {
                             </CrispChatWrapper>
                         </PressedWrapperAnimate>
                     </div>
-                    <div className="rxl:hidden p-4 w-[35rem] h-fit bg-[#787A91] bg-opacity-20 rounded-2xl rsm:hidden">
+                    <div className="rxl:hidden p-4 w-[40rem] h-fit bg-[#787A91] bg-opacity-20 rounded-2xl rsm:hidden">
                         <Image
                             className="rounded-lg h-full w-full"
                             src="/animation.gif"
@@ -125,7 +125,6 @@ function Footer() {
                                 </button>
                             ) : (
                                 <button>
-                                    {" "}
                                     <Icons.Eye
                                         className="absolute top-2 right-3 cursor-pointer"
                                         onClick={() =>

@@ -8,7 +8,6 @@ import Image from "next/image";
 import Profile from "@/public/Profile.png";
 import TestFramer from "@/components/TestFramer";
 import FallingWrapper from "@/components/OnLoadWrapperAnimate";
-import PressedWrapperAnimate from "@/components/PressedWrapperAnimate";
 
 async function getData() {
     const client = createClient({
@@ -28,7 +27,6 @@ export default async function page() {
 
     return (
         <>
-            <TestFramer />
             <FallingWrapper>
                 <LargeHeading>Hi. I&apos;m Ahmad.</LargeHeading>
             </FallingWrapper>
