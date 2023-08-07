@@ -11,7 +11,7 @@ import { Button } from "@/ui/button";
 import Input from "@/ui/Input";
 import { useState } from "react";
 import { toast } from "@/ui/Toast";
-import Logo from "@/public/Logo.svg";
+import Logo from "@/public/Logo2.svg";
 import FallingWrapper from "@/components/OnLoadWrapperAnimate";
 import PressedWrapperAnimate from "@/components/PressedWrapperAnimate";
 
@@ -154,16 +154,16 @@ function Footer() {
                 </div>
 
                 <div className="flex rsm:flex-col gap-4 justify-between items-center text-custom-white mt-7">
-                    <motion.button whileTap={{ scale: 0.9 }}>
+                    <PressedWrapperAnimate>
                         <Link href="/">
                             <Image
                                 src={Logo}
-                                height={30}
-                                width={30}
+                                height={40}
+                                width={40}
                                 alt="logo"
                             />
                         </Link>
-                    </motion.button>
+                    </PressedWrapperAnimate>
                     <span className="text-sm">
                         Copyright © 2023 by Ahmad Fahrezi
                     </span>

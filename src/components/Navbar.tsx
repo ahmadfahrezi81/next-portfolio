@@ -5,23 +5,23 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import CrispChatWrapper from "./CrispChatWrapper";
-import Logo from "@/public/Logo.svg";
+import Logo from "@/public/Logo2.svg";
 import PressedWrapperAnimate from "@/components/PressedWrapperAnimate";
 
 function Navbar() {
     return (
         <nav className="py-5 flex rsm:justify-center justify-between">
-            <motion.button whileTap={{ scale: 0.9 }}>
+            <PressedWrapperAnimate>
                 <Link href="/">
                     <Image
                         className="rsm:hidden"
                         src={Logo}
-                        height={40}
-                        width={40}
+                        height={50}
+                        width={50}
                         alt="logo"
                     />
                 </Link>
-            </motion.button>
+            </PressedWrapperAnimate>
 
             {/* <Motion /> */}
 
