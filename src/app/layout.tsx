@@ -4,9 +4,6 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import dynamic from "next/dynamic";
-import { Suspense } from "react";
-import Loading from "@/components/loading";
-import Head from "next/head";
 import { Toaster } from "@/components/ui/Toast";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -17,6 +14,8 @@ export const metadata: Metadata = {
 };
 
 // const CrispWithNoSSR = dynamic(() => import("../components/CrispChat"));
+
+const AnimatedCursor = dynamic(() => import("react-animated-cursor"));
 
 export default function RootLayout({
     children,

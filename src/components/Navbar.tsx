@@ -7,10 +7,26 @@ import Image from "next/image";
 import CrispChatWrapper from "./CrispChatWrapper";
 import Logo from "@/public/Logo.svg";
 import PressedWrapperAnimate from "@/components/PressedWrapperAnimate";
+import AnimatedCursor from "react-animated-cursor";
 
 function Navbar() {
     return (
         <nav className="py-5 flex rsm:justify-center justify-between">
+            <AnimatedCursor
+                innerSize={12}
+                outerSize={8}
+                outerAlpha={0.2}
+                innerScale={1}
+                outerScale={10}
+                trailingSpeed={1}
+                color="248, 248, 248"
+                innerStyle={{
+                    backgroundColor: "rgba(0, 0, 0, 0.7)",
+                }}
+                outerStyle={{
+                    border: "3px solid rgba(0, 0, 0, 0.4)",
+                }}
+            />
             <motion.button whileTap={{ scale: 0.9 }}>
                 <Link href="/">
                     <Image

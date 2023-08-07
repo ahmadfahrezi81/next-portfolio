@@ -47,7 +47,7 @@ export default async function page({ params }: pageProps) {
                         </span>
                     ))}
                 </Paragraph>
-                <div className="w-full lg:p-16 lg:pb-0 rlg:p-10 rlg:pb-0 rsm:p-3 rsm:pb-0 mt-10 rsm:mt-5 bg-[#787A91] bg-opacity-20 rounded-2xl rsm:rounded">
+                <div className="w-full lg:p-16 lg:pb-0 rlg:p-10 rlg:pb-0 rsm:p-3 mt-10 rsm:mt-5 bg-[#787A91] bg-opacity-20 rounded-2xl rsm:rounded-lg">
                     <Image
                         src={
                             "https:" + data.fields.featureImage.fields.file.url

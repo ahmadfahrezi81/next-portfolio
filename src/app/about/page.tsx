@@ -50,16 +50,16 @@ export default async function page() {
                         </LargeHeading>
                         <Paragraph align="left" className="rsm:text-center">
                             Lorem ipsum dolor sit amet consectetur. Tortor
-                            tellus <br className="rsm:hidden" />
+                            tellus <br className="rlg:hidden" />
                             tempor ligula nisl fames sagittis. Cursus lacinia
-                            quis <br className="rsm:hidden" />
+                            quis <br className="rlg:hidden" />
                             fusce quis cras hendrerit ac. Mus sodales ut
-                            porttitor <br className="rsm:hidden" />
+                            porttitor <br className="rlg:hidden" />
                             cras ac amet maecenas ultricies.
                         </Paragraph>
                         <Paragraph align="left" className="rsm:text-center">
                             Lorem ipsum dolor sit amet consectetur. Tortor
-                            tellus <br className="rsm:hidden" />
+                            tellus <br className="rlg:hidden" />
                             tempor ligula nisl fames sagittis.
                         </Paragraph>
                     </div>
