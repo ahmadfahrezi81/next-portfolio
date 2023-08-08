@@ -1,23 +1,21 @@
 "use client";
 
-import { motion } from "framer-motion";
-
 import Link from "next/link";
 import Image from "next/image";
 import CrispChatWrapper from "./CrispChatWrapper";
-import Logo from "@/public/Logo2.svg";
+import Logo from "@/public/Logo3.svg";
 import PressedWrapperAnimate from "@/components/PressedWrapperAnimate";
 
 function Navbar() {
     return (
-        <nav className="py-5 mt-2 flex rsm:justify-center justify-between">
+        <nav className="py-5 mt-2 flex rsm:justify-center justify-between items-center">
             <PressedWrapperAnimate>
                 <Link href="/">
                     <Image
                         className="rsm:hidden"
                         src={Logo}
-                        height={50}
-                        width={50}
+                        height={45}
+                        width={49}
                         alt="logo"
                     />
                 </Link>

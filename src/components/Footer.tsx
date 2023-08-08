@@ -5,13 +5,12 @@ import Paragraph from "@/ui/Paragraph";
 import Image from "next/image";
 import Icons from "@/components/Icons";
 import Link from "next/link";
-import { motion } from "framer-motion";
 import CrispChatWrapper from "@/components/CrispChatWrapper";
 import { Button } from "@/ui/button";
 import Input from "@/ui/Input";
 import { useState } from "react";
 import { toast } from "@/ui/Toast";
-import Logo from "@/public/Logo2.svg";
+import Logo from "@/public/Logo3.svg";
 import FallingWrapper from "@/components/OnLoadWrapperAnimate";
 import PressedWrapperAnimate from "@/components/PressedWrapperAnimate";
 

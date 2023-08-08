@@ -4,6 +4,9 @@ import Link from "next/link";
 import React from "react";
 import { createClient } from "contentful";
 import Image from "next/image";
+import PressedWrapperAnimate from "@/components/PressedWrapperAnimate";
+import { Button } from "@/components/ui/button";
+import Icons from "@/components/Icons";
 
 interface pageProps {
     params: {
@@ -73,7 +76,7 @@ export default async function page({ params }: pageProps) {
                 <Paragraph className="mb-10 max-w-[500px]" align="center">
                     {data.fields.descriptions}
                 </Paragraph>
-                <div className="grid grid-cols-2 gap-6 rsm:grid-cols-1 w-full bg-[#787A91] bg-opacity-20 lg:p-16 p-10 rsm:p-3 rsm:gap-3 rounded-2xl">
+                <div className="grid grid-cols-1 gap-6 rsm:grid-cols-1 w-full bg-[#787A91] bg-opacity-20 lg:p-16 p-10 rsm:p-3 rsm:gap-3 rounded-2xl">
                     {data.fields.imageTiles.map((item: any, i: number) => (
                         <Image
                             key={i}
@@ -86,6 +89,49 @@ export default async function page({ params }: pageProps) {
                     ))}
                 </div>
             </section>
+
+            <div className="h-fit flex justify-center gap-4 rsm:flex-col rsm:items-center mt-6">
+                {data.fields.links ? (
+                    <>
+                        {data.fields.links.github ? (
+                            <PressedWrapperAnimate>
+                                <Link
+                                    href={`${data.fields.links.github}`}
+                                    target="_blank"
+                                >
+                                    <Button className="text-sm bg-white rsm:w-fit">
+                                        View Code
+                                        <Icons.Github
+                                            className="ml-2"
+                                            size={20}
+                                            color="#00164F"
+                                        />
+                                    </Button>
+                                </Link>
+                            </PressedWrapperAnimate>
+                        ) : null}
+
+                        {data.fields.links.external ? (
+                            <PressedWrapperAnimate>
+                                <Link
+                                    href={`${
+                                        data.fields.links.external ?? null
+                                    }`}
+                                    target="_blank"
+                                >
+                                    <Button className="text-sm">
+                                        Visit Site
+                                        <Icons.ExternalLink
+                                            className="ml-2"
+                                            size={16}
+                                        />
+                                    </Button>
+                                </Link>
+                            </PressedWrapperAnimate>
+                        ) : null}
+                    </>
+                ) : null}
+            </div>
         </>
     );
 }

@@ -71,19 +71,16 @@ export default async function page() {
                     <LargeHeading className="mt-[5rem] mb-6">
                         Technology so far.
                     </LargeHeading>
-                    <Paragraph>
+                    <Paragraph className="mb-5">
                         Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum
                         dolor sit amet <br className="rsm:hidden" /> consectetur
                         ipsum dolor sit amet consectetur.
                     </Paragraph>
-                    {/* <div>Cool all Technology animation moving</div> */}
-                    {/* <TestScroll /> */}
-                    {/* <TestFramer /> */}
                     <div className="bg-[#787A91] bg-opacity-20 p-6 rsm:p-3 rounded-2xl w-full text-white">
                         <div className="bg-custom-white rounded-lg py-16">
                             <ParallaxText baseVelocity={3}>
                                 HTML . CSS . JavaScript . Typescript . Vue .
-                                React . NextJS .
+                                React . NextJS . C . C++ .
                             </ParallaxText>
                             <ParallaxText baseVelocity={-3}>
                                 JQuery . NodeJS . Express . Bootstrap .
@@ -95,7 +92,7 @@ export default async function page() {
                             </ParallaxText>
                             <ParallaxText baseVelocity={-3}>
                                 HTML . CSS . JavaScript . Typescript . Vue .
-                                React . NextJS .
+                                React . NextJS . C . C++ .
                             </ParallaxText>
                             <ParallaxText baseVelocity={3}>
                                 JQuery . NodeJS . Express . Bootstrap .
@@ -117,7 +114,7 @@ export default async function page() {
                             href={`https:${data[0].fields.file.url}`}
                             target="_blank"
                         >
-                            <div className="flex justify-between text-custom-white items-center gap-4 p-8 rsm:p-5 rounded-xl bg-custom-white">
+                            <div className="flex justify-between text-custom-white items-center gap-4 p-8 rsm:p-5 rounded-lg bg-custom-white">
                                 <div className="flex gap-4 items-center">
                                     <span className="p-5 rsm:p-3 bg-custom-blue rounded-full">
                                         <Icons.FileText size={25} />
