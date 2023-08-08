@@ -10,7 +10,7 @@ import PressedWrapperAnimate from "@/components/PressedWrapperAnimate";
 
 function Navbar() {
     return (
-        <nav className="py-5 flex rsm:justify-center justify-between">
+        <nav className="py-5 mt-2 flex rsm:justify-center justify-between">
             <PressedWrapperAnimate>
                 <Link href="/">
                     <Image
