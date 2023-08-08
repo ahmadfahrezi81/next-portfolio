@@ -6,7 +6,7 @@ import Icons from "@/components/Icons";
 import { createClient } from "contentful";
 import Image from "next/image";
 import Profile from "@/public/Profile.png";
-import TestFramer from "@/components/TestFramer";
+import ParallaxText from "@/components/ParallaxText";
 import FallingWrapper from "@/components/OnLoadWrapperAnimate";
 
 async function getData() {
@@ -78,7 +78,35 @@ export default async function page() {
                     </Paragraph>
                     {/* <div>Cool all Technology animation moving</div> */}
                     {/* <TestScroll /> */}
-                    <TestFramer />
+                    {/* <TestFramer /> */}
+                    <div className="bg-[#787A91] bg-opacity-20 p-6 rsm:p-3 rounded-2xl w-full text-white">
+                        <div className="bg-white rounded-lg py-16">
+                            <ParallaxText baseVelocity={3}>
+                                HTML . CSS . JavaScript . Typescript . Vue .
+                                React . NextJS .
+                            </ParallaxText>
+                            <ParallaxText baseVelocity={-3}>
+                                JQuery . NodeJS . Express . Bootstrap .
+                                Tailwinds . Scss/Sass .
+                            </ParallaxText>
+                            <ParallaxText baseVelocity={3.5}>
+                                Java . Python . Firebase . MongoDB . Git . PHP .
+                                RemixJS .
+                            </ParallaxText>
+                            <ParallaxText baseVelocity={-3}>
+                                HTML . CSS . JavaScript . Typescript . Vue .
+                                React . NextJS .
+                            </ParallaxText>
+                            <ParallaxText baseVelocity={3}>
+                                JQuery . NodeJS . Express . Bootstrap .
+                                Tailwinds . Scss/Sass .
+                            </ParallaxText>
+                            <ParallaxText baseVelocity={-3.5}>
+                                Java . Python . Firebase . MongoDB . Git . PHP .
+                                RemixJS .
+                            </ParallaxText>
+                        </div>
+                    </div>
                 </section>
                 <section>
                     <LargeHeading className="mt-[5rem] mb-6">
