@@ -80,7 +80,7 @@ export default async function page() {
                     {/* <TestScroll /> */}
                     {/* <TestFramer /> */}
                     <div className="bg-[#787A91] bg-opacity-20 p-6 rsm:p-3 rounded-2xl w-full text-white">
-                        <div className="bg-white rounded-lg py-16">
+                        <div className="bg-custom-white rounded-lg py-16">
                             <ParallaxText baseVelocity={3}>
                                 HTML . CSS . JavaScript . Typescript . Vue .
                                 React . NextJS .
