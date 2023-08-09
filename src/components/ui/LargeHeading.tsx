@@ -3,7 +3,7 @@
 import * as React from "react";
 import { cva, VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
-import FallingWrapper from "@/components/OnLoadWrapperAnimate";
+import OnLoadWrapperAnimate from "@/components/OnLoadWrapperAnimate";
 
 const headingVariants = cva(
     "text-custom-white dark:text-white font-extrabold leading-tight tracking-tighter",

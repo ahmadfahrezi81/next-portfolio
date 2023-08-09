@@ -11,7 +11,7 @@ import Input from "@/ui/Input";
 import { useState } from "react";
 import { toast } from "@/ui/Toast";
 import Logo from "@/public/Logo3.svg";
-import FallingWrapper from "@/components/OnLoadWrapperAnimate";
+import OnLoadWrapperAnimate from "@/components/OnLoadWrapperAnimate";
 import PressedWrapperAnimate from "@/components/PressedWrapperAnimate";
 
 const email = "ahmadfahrezi8127@gmail.com";
@@ -20,7 +20,7 @@ function Footer() {
     const [toggleShow, setToggleShow] = useState(false);
 
     return (
-        <FallingWrapper delay={0.3}>
+        <OnLoadWrapperAnimate delay={0.3}>
             <footer className="mb-10 mt-20">
                 <div className="flex gap-5 ">
                     {/* <div className="p-6 flex rsm:flex-col gap-10 bg-[#787A91] bg-opacity-40 rounded-2xl justify-between"> */}
@@ -168,7 +168,7 @@ function Footer() {
                     </span>
                 </div>
             </footer>
-        </FallingWrapper>
+        </OnLoadWrapperAnimate>
     );
 }
 

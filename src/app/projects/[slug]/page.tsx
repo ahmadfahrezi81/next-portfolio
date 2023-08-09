@@ -7,6 +7,7 @@ import Image from "next/image";
 import PressedWrapperAnimate from "@/components/PressedWrapperAnimate";
 import { Button } from "@/components/ui/button";
 import Icons from "@/components/Icons";
+import OnLoadWrapperAnimate from "@/components/OnLoadWrapperAnimate";
 
 interface pageProps {
     params: {
@@ -34,104 +35,120 @@ export default async function page({ params }: pageProps) {
     return (
         <>
             <section className="flex flex-col items-center">
-                <LargeHeading className="mb-2">
-                    {data.fields.title}
-                </LargeHeading>
-                <Paragraph className="w-full">
-                    {data.fields.location} | {data.fields.developmentTypes} |{" "}
-                    {data.fields.year}
-                </Paragraph>
-                <Paragraph className="w-full">
-                    {data.fields.techStack.map((item: string, i: number) => (
-                        <span key={i}>
-                            {" "}
-                            {item}
-                            {i !== data.fields.techStack.length - 1 && " • "}
-                        </span>
-                    ))}
-                </Paragraph>
-                <div className="w-full lg:p-16 lg:pb-0 rlg:p-10 rlg:pb-0 rsm:p-3 mt-10 rsm:mt-5 bg-[#787A91] bg-opacity-20 rounded-2xl rsm:rounded-lg">
-                    <Image
-                        src={
-                            "https:" + data.fields.featureImage.fields.file.url
-                        }
-                        width={
-                            data.fields.featureImage.fields.file.details.image
-                                .width
-                        }
-                        height={
-                            data.fields.featureImage.fields.file.details.image
-                                .height
-                        }
-                        alt="Feature Image"
-                        className="rounded-lg rounded-b-none rsm:rounded w-full"
-                    />
-                </div>
-            </section>
+                <OnLoadWrapperAnimate>
+                    <LargeHeading className="mb-2">
+                        {data.fields.title}
+                    </LargeHeading>
+                </OnLoadWrapperAnimate>
+                <OnLoadWrapperAnimate delay={0.05}>
+                    <Paragraph className="w-full">
+                        {data.fields.location} | {data.fields.developmentTypes}{" "}
+                        | {data.fields.year}
+                    </Paragraph>
+                </OnLoadWrapperAnimate>
 
-            <section className="flex flex-col items-center">
-                <LargeHeading size="md" className="mt-[5rem] mb-5">
-                    More about the project.
-                </LargeHeading>
-                <Paragraph className="mb-10 max-w-[500px]" align="center">
-                    {data.fields.descriptions}
-                </Paragraph>
-                <div className="grid grid-cols-1 gap-6 rsm:grid-cols-1 w-full bg-[#787A91] bg-opacity-20 lg:p-16 p-10 rsm:p-3 rsm:gap-3 rounded-2xl">
-                    {data.fields.imageTiles.map((item: any, i: number) => (
+                <OnLoadWrapperAnimate delay={0.1}>
+                    <Paragraph className="w-full">
+                        {data.fields.techStack.map(
+                            (item: string, i: number) => (
+                                <span key={i}>
+                                    {" "}
+                                    {item}
+                                    {i !== data.fields.techStack.length - 1 &&
+                                        " • "}
+                                </span>
+                            )
+                        )}
+                    </Paragraph>
+                </OnLoadWrapperAnimate>
+
+                <OnLoadWrapperAnimate delay={0.4}>
+                    <div className="w-full lg:p-16 lg:pb-0 rlg:p-10 rlg:pb-0 rsm:p-3 mt-10 rsm:mt-5 bg-[#787A91] bg-opacity-20 rounded-2xl rsm:rounded-lg">
                         <Image
-                            key={i}
-                            src={"https:" + item.fields.file.url}
-                            width={item.fields.file.details.image.width}
-                            height={item.fields.file.details.image.height}
-                            alt="image"
-                            className="w-full rounded-lg"
+                            src={
+                                "https:" +
+                                data.fields.featureImage.fields.file.url
+                            }
+                            width={
+                                data.fields.featureImage.fields.file.details
+                                    .image.width
+                            }
+                            height={
+                                data.fields.featureImage.fields.file.details
+                                    .image.height
+                            }
+                            alt="Feature Image"
+                            className="rounded-lg rounded-b-none rsm:rounded w-[100vw]"
                         />
-                    ))}
-                </div>
+                    </div>
+                </OnLoadWrapperAnimate>
             </section>
 
-            <div className="h-fit flex justify-center gap-4 rsm:flex-col rsm:items-center mt-6">
-                {data.fields.links ? (
-                    <>
-                        {data.fields.links.github ? (
-                            <PressedWrapperAnimate>
-                                <Link
-                                    href={`${data.fields.links.github}`}
-                                    target="_blank"
-                                >
-                                    <Button className="text-sm bg-white rsm:w-fit">
-                                        View Code
-                                        <Icons.Github
-                                            className="ml-2"
-                                            size={20}
-                                            color="#00164F"
-                                        />
-                                    </Button>
-                                </Link>
-                            </PressedWrapperAnimate>
-                        ) : null}
+            <OnLoadWrapperAnimate delay={0.4}>
+                <section className="flex flex-col items-center">
+                    <LargeHeading size="md" className="mt-[5rem] mb-5">
+                        More about the project.
+                    </LargeHeading>
+                    <Paragraph className="mb-10 max-w-[500px]" align="center">
+                        {data.fields.descriptions}
+                    </Paragraph>
+                    <div className="grid grid-cols-1 gap-6 rsm:grid-cols-1 w-full bg-[#787A91] bg-opacity-20 lg:p-16 p-10 rsm:p-3 rsm:gap-3 rounded-2xl">
+                        {data.fields.imageTiles.map((item: any, i: number) => (
+                            <Image
+                                key={i}
+                                src={"https:" + item.fields.file.url}
+                                width={item.fields.file.details.image.width}
+                                height={item.fields.file.details.image.height}
+                                alt="image"
+                                className="w-full rounded-lg"
+                            />
+                        ))}
+                    </div>
+                </section>
 
-                        {data.fields.links.external ? (
-                            <PressedWrapperAnimate>
-                                <Link
-                                    href={`${
-                                        data.fields.links.external ?? null
-                                    }`}
-                                    target="_blank"
-                                >
-                                    <Button className="text-sm">
-                                        Visit Site
-                                        <Icons.ExternalLink
-                                            className="ml-2"
-                                            size={16}
-                                        />
-                                    </Button>
-                                </Link>
-                            </PressedWrapperAnimate>
-                        ) : null}
-                    </>
-                ) : null}
-            </div>
+                <div className="h-fit flex justify-center gap-4 rsm:flex-col rsm:items-center mt-6">
+                    {data.fields.links ? (
+                        <>
+                            {data.fields.links.github ? (
+                                <PressedWrapperAnimate>
+                                    <Link
+                                        href={`${data.fields.links.github}`}
+                                        target="_blank"
+                                    >
+                                        <Button className="text-sm bg-white rsm:w-fit">
+                                            View Code
+                                            <Icons.Github
+                                                className="ml-2"
+                                                size={20}
+                                                color="#00164F"
+                                            />
+                                        </Button>
+                                    </Link>
+                                </PressedWrapperAnimate>
+                            ) : null}
+
+                            {data.fields.links.external ? (
+                                <PressedWrapperAnimate>
+                                    <Link
+                                        href={`${
+                                            data.fields.links.external ?? null
+                                        }`}
+                                        target="_blank"
+                                    >
+                                        <Button className="text-sm">
+                                            Visit Site
+                                            <Icons.ExternalLink
+                                                className="ml-2"
+                                                size={16}
+                                            />
+                                        </Button>
+                                    </Link>
+                                </PressedWrapperAnimate>
+                            ) : null}
+                        </>
+                    ) : null}
+                </div>
+            </OnLoadWrapperAnimate>
         </>
     );
 }

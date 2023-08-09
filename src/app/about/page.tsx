@@ -7,7 +7,7 @@ import { createClient } from "contentful";
 import Image from "next/image";
 import Profile from "@/public/Profile.png";
 import ParallaxText from "@/components/ParallaxText";
-import FallingWrapper from "@/components/OnLoadWrapperAnimate";
+import OnLoadWrapperAnimate from "@/components/OnLoadWrapperAnimate";
 
 async function getData() {
     const client = createClient({
@@ -27,11 +27,11 @@ export default async function page() {
 
     return (
         <>
-            <FallingWrapper>
+            <OnLoadWrapperAnimate>
                 <LargeHeading>Hi. I&apos;m Ahmad.</LargeHeading>
-            </FallingWrapper>
+            </OnLoadWrapperAnimate>
 
-            <FallingWrapper delay={0.05}>
+            <OnLoadWrapperAnimate delay={0.05}>
                 <section className="flex rsm:flex-col items-center gap-12 mt-10 sm:gap-28 sm:justify-center">
                     <Image
                         src={Profile}
@@ -64,9 +64,9 @@ export default async function page() {
                         </Paragraph>
                     </div>
                 </section>
-            </FallingWrapper>
+            </OnLoadWrapperAnimate>
 
-            <FallingWrapper delay={0.4}>
+            <OnLoadWrapperAnimate delay={0.4}>
                 <section className="flex flex-col items-center">
                     <LargeHeading className="mt-[5rem] mb-6">
                         Technology so far.
@@ -149,7 +149,7 @@ export default async function page() {
                         </Link>
                     </div>
                 </section>
-            </FallingWrapper>
+            </OnLoadWrapperAnimate>
         </>
     );
 }

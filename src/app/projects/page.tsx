@@ -14,7 +14,7 @@ import {
 } from "@/components/ui/table";
 import Link from "next/link";
 import Icons from "@/components/Icons";
-import FallingWrapper from "@/components/OnLoadWrapperAnimate";
+import OnLoadWrapperAnimate from "@/components/OnLoadWrapperAnimate";
 
 const invoices = [
     {
@@ -80,19 +80,19 @@ export default async function page() {
 
     return (
         <>
-            <FallingWrapper>
+            <OnLoadWrapperAnimate>
                 <LargeHeading className="mb-5">All Projects.</LargeHeading>
-            </FallingWrapper>
+            </OnLoadWrapperAnimate>
 
-            <FallingWrapper delay={0.05}>
+            <OnLoadWrapperAnimate delay={0.05}>
                 <Paragraph className="mb-10">
                     Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor
                     sit amet <br className="rsm:hidden" /> consectetur ipsum
                     dolor sit amet consectetur.
                 </Paragraph>
-            </FallingWrapper>
+            </OnLoadWrapperAnimate>
 
-            <FallingWrapper delay={0.4}>
+            <OnLoadWrapperAnimate delay={0.4}>
                 <Table>
                     <TableHeader>
                         <TableRow>
@@ -152,7 +152,7 @@ export default async function page() {
                         ))}
                     </TableBody>
                 </Table>
-            </FallingWrapper>
+            </OnLoadWrapperAnimate>
         </>
     );
 }

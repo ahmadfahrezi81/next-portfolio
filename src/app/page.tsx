@@ -7,7 +7,7 @@ import Icons from "@/components/Icons";
 import { Button } from "@/ui/button";
 import CrispChatWrapper from "@/components/CrispChatWrapper";
 import HeroCard from "@/components/HeroCard";
-import FallingWrapper from "@/components/OnLoadWrapperAnimate";
+import OnLoadWrapperAnimate from "@/components/OnLoadWrapperAnimate";
 import PressedWrapperAnimate from "@/components/PressedWrapperAnimate";
 import TestAnimate from "@/components/HeroCardWrapperAnimate";
 
@@ -31,19 +31,19 @@ export default async function Home() {
     return (
         <>
             <section className="flex flex-col items-center">
-                <FallingWrapper>
+                <OnLoadWrapperAnimate>
                     <LargeHeading className="mb-4">
                         Hi. I&apos;m Ahmad.
                         <br />A Dev. and Designer
                     </LargeHeading>
-                </FallingWrapper>
-                <FallingWrapper delay={0.05}>
+                </OnLoadWrapperAnimate>
+                <OnLoadWrapperAnimate delay={0.05}>
                     <Paragraph className="flex items-center gap-1 justify-center">
                         <Icons.Globe2 /> <span>Kuala Lumpur, Malaysia</span>
                     </Paragraph>
-                </FallingWrapper>
+                </OnLoadWrapperAnimate>
 
-                <FallingWrapper delay={0.1}>
+                <OnLoadWrapperAnimate delay={0.1}>
                     <PressedWrapperAnimate>
                         <CrispChatWrapper>
                             <Button className="mt-6">
@@ -55,9 +55,9 @@ export default async function Home() {
                             </Button>
                         </CrispChatWrapper>
                     </PressedWrapperAnimate>
-                </FallingWrapper>
+                </OnLoadWrapperAnimate>
             </section>
-            <FallingWrapper delay={0.4}>
+            <OnLoadWrapperAnimate delay={0.4}>
                 <section className="mt-20 flex flex-col gap-8">
                     {/* hero main */}
 
@@ -119,7 +119,7 @@ export default async function Home() {
                         </Link>
                     </PressedWrapperAnimate>
                 </section>
-            </FallingWrapper>
+            </OnLoadWrapperAnimate>
         </>
     );
 }

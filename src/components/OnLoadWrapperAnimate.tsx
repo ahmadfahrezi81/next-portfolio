@@ -1,6 +1,7 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
+import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
 export default function OnLoadWrapperAnimate({
@@ -13,6 +14,10 @@ export default function OnLoadWrapperAnimate({
         triggerOnce: triggerOnce,
         threshold: 0.2,
     });
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     return (
         <>

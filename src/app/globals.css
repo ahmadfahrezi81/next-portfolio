@@ -83,7 +83,7 @@ html {
 }
 
 
-/* tests */
+/* in about page */
 .parallax {
     overflow: hidden;
     letter-spacing: 0px;
@@ -97,6 +97,7 @@ html {
 .parallax .scroller {
     font-weight: 700;
     text-transform: uppercase;
+    opacity: 0.95;
     font-size: 54px;
     display: flex;
     white-space: nowrap;
