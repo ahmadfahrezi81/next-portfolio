@@ -5,6 +5,7 @@ import { Inter } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import dynamic from "next/dynamic";
 import { Toaster } from "@/components/ui/Toast";
+import { Analytics } from "@/components/Analytics";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -32,6 +33,7 @@ export default function RootLayout({
                 <section className="mt-24 rsm:mt-12"> {children}</section>
 
                 <Toaster position="bottom-right" />
+                <Analytics />
 
                 {/* <CrispWithNoSSR /> */}
 
