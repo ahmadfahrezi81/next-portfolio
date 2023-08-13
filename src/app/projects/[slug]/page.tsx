@@ -3,16 +3,70 @@ import LargeHeading from "@/ui/LargeHeading";
 import Link from "next/link";
 import React from "react";
 import { createClient } from "contentful";
+import { notFound } from "next/navigation";
 import Image from "next/image";
 import PressedWrapperAnimate from "@/components/PressedWrapperAnimate";
 import { Button } from "@/components/ui/button";
 import Icons from "@/components/Icons";
 import OnLoadWrapperAnimate from "@/components/OnLoadWrapperAnimate";
 
+export async function generateMetadata({
+    params,
+}: {
+    params: {
+        slug: string;
+    };
+}) {
+    try {
+        const post = await getProject(params);
+        if (!post)
+            return {
+                title: "Not Found",
+                description: "The page you are looking for does not exist.",
+            };
+
+        return {
+            title: post.fields.title,
+            description: post.fields.descriptions,
+            alternates: {
+                canonical: `/projects/${post.fields.slug}`,
+            },
+        };
+    } catch (error) {
+        return {
+            title: "Not Found",
+            description: "The page you are looking for does not exist.",
+        };
+    }
+}
+
+export async function generateStaticParams() {
+    const posts = await getAllProject();
+
+    if (!posts) return [];
+
+    return posts.map((post: any) => ({
+        slug: post.slug,
+    }));
+}
+
 interface pageProps {
     params: {
         id: string;
     };
+}
+
+async function getAllProject() {
+    const client = createClient({
+        space: process.env.CONTENTFUL_SPACE_ID!,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN!,
+    });
+
+    const res = await client.getEntries({
+        content_type: "project",
+    });
+
+    return res.items;
 }
 
 async function getProject(params: any) {
@@ -31,6 +85,8 @@ async function getProject(params: any) {
 
 export default async function page({ params }: pageProps) {
     const data: any = await getProject(params);
+
+    if (!data) notFound();
 
     return (
         <>
