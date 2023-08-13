@@ -5,7 +5,7 @@ import { Inter } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import dynamic from "next/dynamic";
 import { Toaster } from "@/components/ui/Toast";
-import { Analytics } from "@/components/Analytics";
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({ subsets: ["latin"] });
 
