@@ -5,11 +5,11 @@ import React from "react";
 import Paragraph from "./ui/Paragraph";
 import Image from "next/image";
 import LargeHeading from "@/ui/LargeHeading";
-import TestAnimate from "@/components/HeroCardWrapperAnimate";
+import HeroCardWrapperAnimate from "@/components/HeroCardWrapperAnimate";
 
 function HeroCard({ data }: any) {
     return (
-        <TestAnimate>
+        <HeroCardWrapperAnimate>
             <Link href={`/projects/${data.slug}`}>
                 <div
                     className="w-full flex-1 rounded-2xl bg-[#787A91] bg-opacity-20 p-12 pb-0 pr-0 rlg:p-10 rlg:pb-0 rlg:pr-0
@@ -31,7 +31,7 @@ function HeroCard({ data }: any) {
                     />
                 </div>
             </Link>
-        </TestAnimate>
+        </HeroCardWrapperAnimate>
     );
 }
 

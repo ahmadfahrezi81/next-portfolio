@@ -9,7 +9,7 @@ import CrispChatWrapper from "@/components/CrispChatWrapper";
 import HeroCard from "@/components/HeroCard";
 import OnLoadWrapperAnimate from "@/components/OnLoadWrapperAnimate";
 import PressedWrapperAnimate from "@/components/PressedWrapperAnimate";
-import TestAnimate from "@/components/HeroCardWrapperAnimate";
+import HeroCardWrapperAnimate from "@/components/HeroCardWrapperAnimate";
 
 async function getData() {
     const client = createClient({
@@ -33,7 +33,7 @@ export default async function Home() {
             <section className="flex flex-col items-center">
                 <OnLoadWrapperAnimate>
                     <LargeHeading className="mb-4">
-                        Hi. I&apos;m Ahmad.
+                        Hi. I&apos;m Fahrezi.
                         <br />A Dev. and Designer
                     </LargeHeading>
                 </OnLoadWrapperAnimate>
@@ -61,7 +61,7 @@ export default async function Home() {
                 <section className="mt-20 flex flex-col gap-8">
                     {/* hero main */}
 
-                    <TestAnimate>
+                    <HeroCardWrapperAnimate>
                         <Link href={`/projects/${data[0].fields.slug}`}>
                             <div className=" rounded-2xl bg-[#787A91] bg-opacity-20 p-12 pb-0 rlg:p-10 rlg:pb-0  rsm:p-7 rsm:pb-0">
                                 <Paragraph align="left" className="mb-0">
@@ -85,7 +85,7 @@ export default async function Home() {
                                 />
                             </div>
                         </Link>
-                    </TestAnimate>
+                    </HeroCardWrapperAnimate>
 
                     <div className="flex flex-row gap-8 w-full rsm:flex-col">
                         {/* hero 1 */}
@@ -100,10 +100,14 @@ export default async function Home() {
                         Notable Projects.
                     </LargeHeading>
                     <Paragraph className="mb-10">
+                        Here are some other noteworthy projects I&apos;ve been
+                        involved in.
+                    </Paragraph>
+                    {/* <Paragraph className="mb-10">
                         Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum
                         dolor sit amet consectetur ipsum dolor sit amet
                         consectetur.
-                    </Paragraph>
+                    </Paragraph> */}
                     {/* <div className="flex flex-row gap-6 w-full rsm:flex-col"> */}
                     <div className="grid grid-cols-3 gap-8 rlg:grid-cols-2 rsm:grid-cols-1">
                         <HeroCard data={data[3].fields} />

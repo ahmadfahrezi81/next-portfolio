@@ -28,7 +28,7 @@ export default async function page() {
     return (
         <>
             <OnLoadWrapperAnimate>
-                <LargeHeading>Hi. I&apos;m Ahmad.</LargeHeading>
+                <LargeHeading>Hi. I&apos;m Fahrezi.</LargeHeading>
             </OnLoadWrapperAnimate>
 
             <OnLoadWrapperAnimate delay={0.05}>
@@ -48,19 +48,22 @@ export default async function page() {
                         >
                             Full Stack Developer and Designer
                         </LargeHeading>
-                        <Paragraph align="left" className="rsm:text-center">
-                            Lorem ipsum dolor sit amet consectetur. Tortor
-                            tellus <br className="rlg:hidden" />
-                            tempor ligula nisl fames sagittis. Cursus lacinia
-                            quis <br className="rlg:hidden" />
-                            fusce quis cras hendrerit ac. Mus sodales ut
-                            porttitor <br className="rlg:hidden" />
-                            cras ac amet maecenas ultricies.
+                        <Paragraph
+                            align="left"
+                            className="rsm:text-center max-w-[500px]"
+                        >
+                            I enjoy making things that look great and serve a
+                            purpose. I&apos;ve been a web developer/designer for
+                            over three years. I excel in designing user-friendly
+                            interfaces, creating prototypes, and writing code.
                         </Paragraph>
-                        <Paragraph align="left" className="rsm:text-center">
-                            Lorem ipsum dolor sit amet consectetur. Tortor
-                            tellus <br className="rlg:hidden" />
-                            tempor ligula nisl fames sagittis.
+                        <Paragraph
+                            align="left"
+                            className="rsm:text-center max-w-[500px]"
+                        >
+                            I&apos;m confident in my ability to assist you and
+                            provide guidance in establishing your ideal digital
+                            brand.
                         </Paragraph>
                     </div>
                 </section>
@@ -72,9 +75,11 @@ export default async function page() {
                         Technology so far.
                     </LargeHeading>
                     <Paragraph className="mb-5">
-                        Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum
-                        dolor sit amet <br className="rsm:hidden" /> consectetur
-                        ipsum dolor sit amet consectetur.
+                        Here are some of the technologies I&apos;m familiar
+                        with. I&apos;m constantly striving to{" "}
+                        <br className="rmd:hidden" />
+                        expand my knowledge and integrate new technologies into
+                        my skill set.
                     </Paragraph>
                     <div className="bg-[#787A91] bg-opacity-20 p-6 rsm:p-3 rounded-2xl w-full text-white">
                         <div className="bg-custom-white rounded-lg py-16">

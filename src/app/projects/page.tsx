@@ -86,10 +86,15 @@ export default async function page() {
 
             <OnLoadWrapperAnimate delay={0.05}>
                 <Paragraph className="mb-10">
+                    Feel welcome to explore the complete archive of notable
+                    projects. <br className="rsm:hidden" /> Freely dive into any
+                    of them for further exploration.
+                </Paragraph>
+                {/* <Paragraph className="mb-10">
                     Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor
                     sit amet <br className="rsm:hidden" /> consectetur ipsum
                     dolor sit amet consectetur.
-                </Paragraph>
+                </Paragraph> */}
             </OnLoadWrapperAnimate>
 
             <OnLoadWrapperAnimate delay={0.4}>
