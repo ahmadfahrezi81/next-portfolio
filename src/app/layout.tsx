@@ -16,6 +16,9 @@ export const metadata: Metadata = {
         template: "%s | Ahmad Fahrezi",
     },
     description: "Ahmad Fahrezi Portfolio Site",
+    verification: {
+        google: "google-site-verification=0xSmu3TeTPxK3uaWwvuYopyPkTl4Ig1_W80DjhVmyoI",
+    },
 };
 
 // const CrispWithNoSSR = dynamic(() => import("../components/CrispChat"));
