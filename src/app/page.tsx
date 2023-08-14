@@ -79,7 +79,7 @@ export default async function Home() {
                                         "https:" +
                                         data[0].fields.thumbnail.fields.file.url
                                     }
-                                    priority
+                                    priority={true}
                                     width={1200}
                                     height={400}
                                     alt="card image"

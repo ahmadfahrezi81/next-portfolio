@@ -1,5 +1,18 @@
 import { MetadataRoute } from "next";
-import { getAllProject } from "./projects/[slug]/page";
+import { createClient } from "contentful";
+
+async function getAllProject() {
+    const client = createClient({
+        space: process.env.CONTENTFUL_SPACE_ID!,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN!,
+    });
+
+    const res = await client.getEntries({
+        content_type: "project",
+    });
+
+    return res.items;
+}
 
 export default async function sitemap() {
     const baseURL = "https://www.ahmadfahrezi.com";
