@@ -20,11 +20,32 @@ export const metadata: Metadata = {
     verification: {
         google: "google-site-verification=0xSmu3TeTPxK3uaWwvuYopyPkTl4Ig1_W80DjhVmyoI",
     },
+    icons: [
+        {
+            rel: "icon",
+            type: "image/png",
+            sizes: "48x48",
+            url: "/Logo3.svg",
+        },
+        {
+            rel: "icon",
+            type: "image/png",
+            sizes: "32x32",
+            url: "/Logo3.svg",
+        },
+        {
+            rel: "icon",
+            type: "image/png",
+            sizes: "16x16",
+            url: "/Logo3",
+        },
+        {
+            rel: "apple-touch-icon",
+            sizes: "180x180",
+            url: "/Logo3",
+        },
+    ],
 };
-
-// const CrispWithNoSSR = dynamic(() => import("../components/CrispChat"));
-
-const AnimatedCursor = dynamic(() => import("react-animated-cursor"));
 
 export default function RootLayout({
     children,
