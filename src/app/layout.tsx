@@ -10,12 +10,13 @@ import { Analytics } from "@vercel/analytics/react";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-    metadataBase: new URL("https://www.ahmadfahrezi.com/"),
+    metadataBase: new URL("https://www.ahmadfahrezi.com"),
     title: {
         default: "Ahmad Fahrezi • Web Dev & Designer",
         template: "%s | Ahmad Fahrezi",
     },
-    description: "Ahmad Fahrezi Portfolio Site",
+    description:
+        "Ahmad Fahrezi: Crafting Excellence in Web Design and Development. Discover purposeful and visually captivating creations.",
     verification: {
         google: "google-site-verification=0xSmu3TeTPxK3uaWwvuYopyPkTl4Ig1_W80DjhVmyoI",
     },

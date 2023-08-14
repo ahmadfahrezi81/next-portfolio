@@ -46,7 +46,7 @@ export async function generateStaticParams() {
     if (!posts) return [];
 
     return posts.map((post: any) => ({
-        slug: post.slug,
+        slug: post.fields.slug,
     }));
 }
 
@@ -56,7 +56,7 @@ interface pageProps {
     };
 }
 
-async function getAllProject() {
+export async function getAllProject() {
     const client = createClient({
         space: process.env.CONTENTFUL_SPACE_ID!,
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN!,
