@@ -37,12 +37,12 @@ export const metadata: Metadata = {
             rel: "icon",
             type: "image/png",
             sizes: "16x16",
-            url: "/Logo3",
+            url: "/Logo3.svg",
         },
         {
             rel: "apple-touch-icon",
             sizes: "180x180",
-            url: "/Logo3",
+            url: "/Logo3.svg",
         },
     ],
 };
