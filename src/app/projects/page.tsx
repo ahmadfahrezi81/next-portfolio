@@ -138,6 +138,7 @@ export default async function page() {
                                             className="m-1 w-fit"
                                             href={item.fields.links.github}
                                             target="_blank"
+                                            rel="noopener noreferrer"
                                         >
                                             <Icons.github />
                                         </Link>
@@ -148,6 +149,7 @@ export default async function page() {
                                             className="m-1"
                                             href={item.fields.links.external}
                                             target="_blank"
+                                            rel="noopener noreferrer"
                                         >
                                             <Icons.ExternalLink />
                                         </Link>

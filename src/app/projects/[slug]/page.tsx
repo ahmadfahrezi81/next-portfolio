@@ -170,6 +170,7 @@ export default async function page({ params }: pageProps) {
                                     <Link
                                         href={`${data.fields.links.github}`}
                                         target="_blank"
+                                        rel="noopener noreferrer"
                                     >
                                         <Button className="text-sm bg-white rsm:w-fit">
                                             View Code
@@ -189,7 +190,7 @@ export default async function page({ params }: pageProps) {
                                         href={`${
                                             data.fields.links.external ?? null
                                         }`}
-                                        target="_blank"
+                                        rel="noopener noreferrer"
                                     >
                                         <Button className="text-sm">
                                             Visit Site

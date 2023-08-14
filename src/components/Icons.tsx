@@ -43,9 +43,13 @@ import {
     Send,
     Eye,
     EyeOff,
+    Squirrel,
+    Trees,
 } from "lucide-react";
 
 export const Icons = {
+    Trees,
+    Squirrel,
     Eye,
     EyeOff,
     Send,

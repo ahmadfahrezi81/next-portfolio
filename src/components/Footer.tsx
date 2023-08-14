@@ -70,6 +70,7 @@ function Footer() {
                                 className="cursor-pointer block hover:bg-black hover:bg-opacity-20 px-2 py-2 rounded-lg"
                                 href="https://github.com/ahmadfahrezi81"
                                 target="_blank"
+                                aria-label="github"
                             >
                                 <Icons.github />
                             </Link>
@@ -77,6 +78,7 @@ function Footer() {
                                 className="cursor-pointer block hover:bg-black hover:bg-opacity-20 px-2 py-2 rounded-lg"
                                 href="https://twitter.com/a_fahrezi81"
                                 target="_blank"
+                                aria-label="twitter"
                             >
                                 <Icons.twitter />
                             </Link>
@@ -84,6 +86,7 @@ function Footer() {
                                 className="cursor-pointer block hover:bg-black hover:bg-opacity-20 px-2 py-2 rounded-lg"
                                 href="https://www.linkedin.com/in/ahmadfahrezi/"
                                 target="_blank"
+                                aria-label="linkedin"
                             >
                                 <Icons.linkedin />
                             </Link>
@@ -91,6 +94,7 @@ function Footer() {
                                 className="cursor-pointer md:hidden block hover:bg-black hover:bg-opacity-20 px-2 py-2 rounded-lg"
                                 href={`mailto:${email}`}
                                 target="_blank"
+                                aria-label="email"
                             >
                                 <Icons.mail />
                             </Link>
@@ -101,6 +105,7 @@ function Footer() {
                         <Link
                             className="block hover:bg-black hover:bg-opacity-20 px-2 py-2 rounded-lg"
                             href={`mailto:${email}`}
+                            aria-label="email"
                         >
                             <Icons.mail />
                         </Link>
@@ -136,6 +141,7 @@ function Footer() {
 
                         <PressedWrapperAnimate>
                             <button
+                                aria-label="copy email"
                                 onClick={(e) => {
                                     e.preventDefault();
                                     navigator.clipboard.writeText(email);
