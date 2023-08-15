@@ -18,9 +18,6 @@ export const metadata: Metadata = {
     },
     description:
         "Ahmad Fahrezi: Crafting Excellence in Web Design and Development. Discover purposeful and visually captivating creations.",
-    verification: {
-        google: "google-site-verification=0xSmu3TeTPxK3uaWwvuYopyPkTl4Ig1_W80DjhVmyoI",
-    },
 };
 
 export default function RootLayout({
