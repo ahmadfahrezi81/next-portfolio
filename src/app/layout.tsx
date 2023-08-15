@@ -28,6 +28,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <head>
+                {/* icons on all devices */}
                 <link
                     rel="apple-touch-icon"
                     sizes="180x180"
@@ -53,6 +54,23 @@ export default function RootLayout({
                 />
                 <meta name="msapplication-TileColor" content="#da532c" />
                 <meta name="theme-color" content="#ffffff" />
+
+                {/* opengraph-image & twitter image */}
+                <meta property="og:type" content="website" />
+                <meta property="og:site_name" content="Ahmad Fahrezi" />
+                <meta
+                    property="og:title"
+                    content="Ahmad Fahrezi | Web Dev & Designer"
+                />
+                <meta
+                    property="og:description"
+                    content="Ahmad Fahrezi: Crafting Excellence in Web Design and Development. Discover purposeful and visually captivating creations."
+                />
+                <meta
+                    property="og:url"
+                    content="https://html.sammy-codes.com/"
+                />
+                <meta property="og:image:alt" content="Ahmad Fahrezi" />
             </head>
             <body
                 className={`${inter.className} mx-auto max-w-[1400px] rsm:px-4 rmd:px-8 rlg:px-12 px-24 bg-custom-blue`}
