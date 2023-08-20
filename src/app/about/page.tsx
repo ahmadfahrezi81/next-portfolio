@@ -5,7 +5,7 @@ import React from "react";
 import Icons from "@/components/Icons";
 import { createClient } from "contentful";
 import Image from "next/image";
-import Profile from "@/public/Profile.png";
+import Profile from "@/public/Profile2.png";
 import ParallaxText from "@/components/ParallaxText";
 import OnLoadWrapperAnimate from "@/components/OnLoadWrapperAnimate";
 
@@ -28,41 +28,46 @@ export default async function page() {
     return (
         <>
             <OnLoadWrapperAnimate>
-                <LargeHeading>Hi. I&apos;m Fahrezi.</LargeHeading>
+                <LargeHeading className="mb-14">
+                    I&apos;m Ahmad Fahrezi.
+                </LargeHeading>
             </OnLoadWrapperAnimate>
 
             <OnLoadWrapperAnimate delay={0.05}>
-                <section className="flex rsm:flex-col items-center gap-12 mt-10 sm:gap-28 sm:justify-center">
-                    <Image
-                        src={Profile}
-                        height={400}
-                        width={350}
-                        alt="Profile Image"
-                        className="bg-blue-100 rounded-t-full rounded-b-xl"
-                    />
+                <section className="flex rmd:flex-col items-center mb-10 gap-20 rmd:gap-10 mt-10 sm:justify-center">
+                    <div className="bg-[#787A91] bg-opacity-20 p-3 rsm:p-3 rounded-2xl w-fit">
+                        <Image
+                            src={Profile}
+                            height={400}
+                            width={350}
+                            alt="Profile Image"
+                            className="bg-blue-100 rounded-lg"
+                        />
+                    </div>
                     <div className="flex flex-col gap-5">
                         <LargeHeading
                             size="md"
                             align="left"
-                            className="rsm:text-center"
+                            className="rmd:text-center"
                         >
-                            Full Stack Developer and Designer
+                            Full Stack Developer <br /> and Designer
                         </LargeHeading>
                         <Paragraph
                             align="left"
-                            className="rsm:text-center max-w-[500px]"
+                            className="rmd:text-center max-w-[500px]"
                         >
-                            I enjoy making things that look great and serve a
-                            purpose. I&apos;ve been a web developer/designer for
-                            over three years. I excel in designing user-friendly
-                            interfaces, creating prototypes, and writing code.
+                            Crafting visually appealing and functional creations
+                            is my passion. With more than three years of
+                            experience as a web developer/designer, I specialize
+                            in designing intuitive interfaces, crafting
+                            prototypes, and coding solutions.
                         </Paragraph>
                         <Paragraph
                             align="left"
-                            className="rsm:text-center max-w-[500px]"
+                            className="rmd:text-center max-w-[500px]"
                         >
-                            I&apos;m confident in my ability to assist you and
-                            provide guidance in establishing your ideal digital
+                            Rest assured, I am well-prepared to support you and
+                            offer direction in shaping your perfect digital
                             brand.
                         </Paragraph>
                     </div>
@@ -70,7 +75,7 @@ export default async function page() {
             </OnLoadWrapperAnimate>
 
             <OnLoadWrapperAnimate delay={0.4}>
-                <section className="flex flex-col items-center">
+                <section className="flex flex-col items-center mb-10">
                     <LargeHeading className="mt-[5rem] mb-6">
                         Technology so far.
                     </LargeHeading>
@@ -111,7 +116,7 @@ export default async function page() {
                     </div>
                 </section>
                 <section>
-                    <LargeHeading className="mt-[5rem] mb-6">
+                    <LargeHeading className="mt-[5rem] mb-8">
                         Resume.
                     </LargeHeading>
                     <div className="bg-[#787A91] bg-opacity-20 p-6 rsm:p-3 rounded-2xl">
