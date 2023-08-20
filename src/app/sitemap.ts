@@ -40,10 +40,6 @@ export default async function sitemap() {
             url: baseURL + "/projects",
             lastModified: new Date(),
         },
-        {
-            url: baseURL + "/projects",
-            lastModified: new Date(),
-        },
         ...projectsURL,
     ];
 }
