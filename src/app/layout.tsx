@@ -55,7 +55,7 @@ export default function RootLayout({
                 <meta name="msapplication-TileColor" content="#da532c" />
                 <meta name="theme-color" content="#ffffff" />
 
-                {/* opengraph-image & twitter image */}
+                {/* opengraph-image*/}
                 <meta property="og:type" content="website" />
                 <meta property="og:site_name" content="Ahmad Fahrezi" />
                 <meta
@@ -69,8 +69,10 @@ export default function RootLayout({
                 <meta property="og:url" content="https://ahmadfahrezi.com/" />
                 <meta property="og:image:alt" content="Ahmad Fahrezi" />
 
+                {/* Twitter */}
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:site" content="@a_fahrezi81" />
+                <meta name="twitter:creator" content="@a_fahrezi81" />
                 <meta
                     name="twitter:title"
                     content="Ahmad Fahrezi | Web Dev & Designer"
@@ -78,6 +80,10 @@ export default function RootLayout({
                 <meta
                     name="twitter:description"
                     content="Ahmad Fahrezi: Crafting Excellence in Web Design and Development. Discover purposeful and visually captivating creations."
+                />
+                <meta
+                    name="twitter:image"
+                    content="https://www.ahmadfahrezi.com/twitter-image.png"
                 />
             </head>
             <body
