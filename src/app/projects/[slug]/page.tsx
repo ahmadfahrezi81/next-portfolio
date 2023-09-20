@@ -10,45 +10,45 @@ import { Button } from "@/components/ui/button";
 import Icons from "@/components/Icons";
 import OnLoadWrapperAnimate from "@/components/OnLoadWrapperAnimate";
 
-export async function generateMetadata({
-    params,
-}: {
-    params: {
-        slug: string;
-    };
-}) {
-    try {
-        const post = await getProject(params);
-        if (!post)
-            return {
-                title: "Not Found",
-                description: "The page you are looking for does not exist.",
-            };
+// export async function generateMetadata({
+//     params,
+// }: {
+//     params: {
+//         slug: string;
+//     };
+// }) {
+//     try {
+//         const post = await getProject(params);
+//         if (!post)
+//             return {
+//                 title: "Not Found",
+//                 description: "The page you are looking for does not exist.",
+//             };
 
-        return {
-            title: post.fields.title,
-            description: post.fields.descriptions,
-            alternates: {
-                canonical: `/projects/${post.fields.slug}`,
-            },
-        };
-    } catch (error) {
-        return {
-            title: "Not Found",
-            description: "The page you are looking for does not exist.",
-        };
-    }
-}
+//         return {
+//             title: post.fields.title,
+//             description: post.fields.descriptions,
+//             alternates: {
+//                 canonical: `/projects/${post.fields.slug}`,
+//             },
+//         };
+//     } catch (error) {
+//         return {
+//             title: "Not Found",
+//             description: "The page you are looking for does not exist.",
+//         };
+//     }
+// }
 
-export async function generateStaticParams() {
-    const posts = await getAllProject();
+// export async function generateStaticParams() {
+//     const posts = await getAllProject();
 
-    if (!posts) return [];
+//     if (!posts) return [];
 
-    return posts.map((post: any) => ({
-        slug: post.fields.slug,
-    }));
-}
+//     return posts.map((post: any) => ({
+//         slug: post.fields.slug,
+//     }));
+// }
 
 interface pageProps {
     params: {
@@ -56,18 +56,18 @@ interface pageProps {
     };
 }
 
-async function getAllProject() {
-    const client = createClient({
-        space: process.env.CONTENTFUL_SPACE_ID!,
-        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN!,
-    });
+// async function getAllProject() {
+//     const client = createClient({
+//         space: process.env.CONTENTFUL_SPACE_ID!,
+//         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN!,
+//     });
 
-    const res = await client.getEntries({
-        content_type: "project",
-    });
+//     const res = await client.getEntries({
+//         content_type: "project",
+//     });
 
-    return res.items;
-}
+//     return res.items;
+// }
 
 async function getProject(params: any) {
     const client = createClient({

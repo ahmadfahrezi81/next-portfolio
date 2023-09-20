@@ -1,5 +1,9 @@
-User-Agent: *
+# *
+User-agent: *
 Allow: /
-Disallow: /private/
 
+# Host
+Host: https://www.ahmadfahrezi.com
+
+# Sitemaps
 Sitemap: https://www.ahmadfahrezi.com/sitemap.xml

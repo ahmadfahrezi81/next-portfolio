@@ -88,27 +88,27 @@ export default async function page() {
                     </Paragraph>
                     <div className="bg-[#787A91] bg-opacity-20 p-6 rsm:p-3 rounded-2xl w-full text-white">
                         <div className="bg-custom-white rounded-lg py-16">
-                            <ParallaxText baseVelocity={3}>
+                            <ParallaxText baseVelocity={1}>
                                 HTML . CSS . JavaScript . Typescript . Vue .
                                 React . NextJS . C . C++ .
                             </ParallaxText>
-                            <ParallaxText baseVelocity={-3}>
+                            <ParallaxText baseVelocity={-1}>
+                                HTML . CSS . JavaScript . Typescript . Vue .
+                                React . NextJS . C . C++ .
+                            </ParallaxText>
+                            <ParallaxText baseVelocity={1}>
                                 JQuery . NodeJS . Express . Bootstrap .
                                 Tailwinds . Scss/Sass .
                             </ParallaxText>
-                            <ParallaxText baseVelocity={3.5}>
+                            <ParallaxText baseVelocity={-1}>
+                                JQuery . NodeJS . Express . Bootstrap .
+                                Tailwinds . Scss/Sass .
+                            </ParallaxText>
+                            <ParallaxText baseVelocity={1}>
                                 Java . Python . Firebase . MongoDB . Git . PHP .
                                 RemixJS .
                             </ParallaxText>
-                            <ParallaxText baseVelocity={-3}>
-                                HTML . CSS . JavaScript . Typescript . Vue .
-                                React . NextJS . C . C++ .
-                            </ParallaxText>
-                            <ParallaxText baseVelocity={3}>
-                                JQuery . NodeJS . Express . Bootstrap .
-                                Tailwinds . Scss/Sass .
-                            </ParallaxText>
-                            <ParallaxText baseVelocity={-3.5}>
+                            <ParallaxText baseVelocity={-1}>
                                 Java . Python . Firebase . MongoDB . Git . PHP .
                                 RemixJS .
                             </ParallaxText>

@@ -1,0 +1,62 @@
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://www.ahmadfahrezi.com</loc>
+        <lastmod>2023-09-20</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://www.ahmadfahrezi.com/about</loc>
+        <lastmod>2023-09-20</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.ahmadfahrezi.com/projects</loc>
+        <lastmod>2023-09-20</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+
+    </url>
+    <url>
+        <loc>https://www.ahmadfahrezi.com/projects/imagine-api</loc>
+        <lastmod>2023-09-20</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+
+    </url>
+    <url>
+        <loc>https://www.ahmadfahrezi.com/projects/guess-country</loc>
+        <lastmod>2023-09-20</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+
+    </url>
+    <url>
+        <loc>https://www.ahmadfahrezi.com/projects/atask</loc>
+        <lastmod>2023-09-20</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+
+    </url>
+    <url>
+        <loc>https://www.ahmadfahrezi.com/projects/unicorny-ai</loc>
+        <lastmod>2023-09-20</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+
+    </url>
+    <url>
+        <loc>https://www.ahmadfahrezi.com/projects/easybank</loc>
+        <lastmod>2023-09-20</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+
+    </url>
+    <url>
+        <loc>https://www.ahmadfahrezi.com/projects/tost</loc>
+        <lastmod>2023-09-20</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+</urlset>

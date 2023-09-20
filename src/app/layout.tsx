@@ -11,11 +11,7 @@ import Head from "next/head";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-    metadataBase: new URL("https://www.ahmadfahrezi.com"),
-    title: {
-        default: "Ahmad Fahrezi • Web Dev & Designer",
-        template: "%s | Ahmad Fahrezi",
-    },
+    title: "Ahmad Fahrezi • Web Dev & Designer",
     description:
         "Ahmad Fahrezi: Crafting Excellence in Web Design and Development. Discover purposeful and visually captivating creations.",
 };
