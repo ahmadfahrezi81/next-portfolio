@@ -63,7 +63,7 @@ export default async function Home() {
 
                     <HeroCardWrapperAnimate>
                         <Link href={`/projects/${data[0].fields.slug}`}>
-                            <div className=" rounded-2xl bg-[#787A91] bg-opacity-20 p-12 pb-0 rlg:p-10 rlg:pb-0  rsm:p-7 rsm:pb-0">
+                            <div className=" rounded-2xl bg-[#000] bg-opacity-30 p-12 pb-0 rlg:p-10 rlg:pb-0  rsm:p-7 rsm:pb-0">
                                 <Paragraph align="left" className="mb-0">
                                     {data[0].fields.location}
                                 </Paragraph>

@@ -35,7 +35,7 @@ export default async function page() {
 
             <OnLoadWrapperAnimate delay={0.05}>
                 <section className="flex rmd:flex-col items-center mb-10 gap-20 rmd:gap-10 mt-10 sm:justify-center">
-                    <div className="bg-[#787A91] bg-opacity-20 p-3 rsm:p-3 rounded-2xl w-fit">
+                    <div className="bg-[#000] bg-opacity-30 p-3 rsm:p-3 rounded-2xl w-fit">
                         <Image
                             src={Profile}
                             height={400}
@@ -86,7 +86,7 @@ export default async function page() {
                         expand my knowledge and integrate new technologies into
                         my skill set.
                     </Paragraph>
-                    <div className="bg-[#787A91] bg-opacity-20 p-6 rsm:p-3 rounded-2xl w-full text-white">
+                    <div className="bg-[#000] bg-opacity-30 p-6 rsm:p-3 rounded-2xl w-full text-white">
                         <div className="bg-custom-white rounded-lg py-16">
                             <ParallaxText baseVelocity={1}>
                                 HTML . CSS . JavaScript . Typescript . Vue .
@@ -119,7 +119,7 @@ export default async function page() {
                     <LargeHeading className="mt-[5rem] mb-8">
                         Resume.
                     </LargeHeading>
-                    <div className="bg-[#787A91] bg-opacity-20 p-6 rsm:p-3 rounded-2xl">
+                    <div className="bg-[#000] bg-opacity-30 p-6 rsm:p-3 rounded-2xl">
                         <Link
                             href={`https:${data[0].fields.file.url}`}
                             target="_blank"

@@ -25,12 +25,12 @@ function Navbar() {
 
             <div
                 className="flex rsm:justify-between rsm:p-2 rsm:w-[380px]
-            w-fit items-center sm:gap-5 bg-[#787A91] bg-opacity-30 text-custom-white px-10 py-3 rounded-xl"
+            w-fit items-center sm:gap-5 bg-[#000] bg-opacity-30 text-custom-white px-10 py-3 rounded-xl"
             >
                 <PressedWrapperAnimate>
                     <Link
                         href="/"
-                        className="hover:bg-black hover:bg-opacity-20 px-4 py-2 rounded-lg"
+                        className="hover:bg-black hover:bg-opacity-20 px-4 py-2 rounded-lg font-semibold"
                     >
                         Home
                     </Link>
@@ -38,7 +38,7 @@ function Navbar() {
 
                 <PressedWrapperAnimate>
                     <Link
-                        className="block hover:bg-black hover:bg-opacity-20 px-4 py-2 rounded-lg"
+                        className="block hover:bg-black hover:bg-opacity-20 px-4 py-2 rounded-lg font-semibold"
                         href="/projects"
                     >
                         Projects
@@ -47,7 +47,7 @@ function Navbar() {
 
                 <PressedWrapperAnimate>
                     <Link
-                        className="hover:bg-black hover:bg-opacity-20  px-4 py-2 rounded-lg"
+                        className="hover:bg-black hover:bg-opacity-20  px-4 py-2 rounded-lg font-semibold"
                         href="/about"
                     >
                         About
@@ -57,7 +57,7 @@ function Navbar() {
                 <PressedWrapperAnimate>
                     <CrispChatWrapper>
                         <Link
-                            className="hover:bg-black hover:bg-opacity-20  px-4 py-2 rounded-lg"
+                            className="hover:bg-black hover:bg-opacity-20  px-4 py-2 rounded-lg font-semibold"
                             href="#"
                         >
                             Contact

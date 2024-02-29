@@ -25,7 +25,7 @@ function Footer() {
                 <div className="flex gap-5 ">
                     {/* <div className="p-6 flex rsm:flex-col gap-10 bg-[#787A91] bg-opacity-40 rounded-2xl justify-between"> */}
                     <div
-                        className="p-16 w-full bg-[#787A91] bg-opacity-20 rounded-2xl 
+                        className="p-16 w-full bg-[#000] bg-opacity-30 rounded-2xl 
                 flex flex-col gap-7 justify-center rmd:items-center rsm:p-10 relative"
                     >
                         <LargeHeading align="left" className="rsm:text-center">
@@ -52,7 +52,7 @@ function Footer() {
                             </CrispChatWrapper>
                         </PressedWrapperAnimate>
                     </div>
-                    <div className="rxl:hidden p-4 w-[40rem] h-fit bg-[#787A91] bg-opacity-20 rounded-2xl rsm:hidden">
+                    <div className="rxl:hidden p-4 w-[40rem] h-fit bg-[#000] bg-opacity-30 rounded-2xl rsm:hidden">
                         <Image
                             className="rounded-lg h-full w-full"
                             src="/animation.gif"
@@ -64,7 +64,7 @@ function Footer() {
                 </div>
 
                 <div className="mt-7 flex gap-5 rsm:flex-col rms:w-full">
-                    <div className="rmd:w-full rmd:flex rmd:justify-center bg-[#787A91] bg-opacity-40 text-custom-white rounded-xl">
+                    <div className="rmd:w-full rmd:flex rmd:justify-center bg-[#000] bg-opacity-30 text-custom-white rounded-xl">
                         <div className="rmd:w-[380px] flex justify-between items-center gap-8 rsm:gap-1 px-10 rsm:px-6 py-5">
                             <Link
                                 className="cursor-pointer block hover:bg-black hover:bg-opacity-20 px-2 py-2 rounded-lg"
@@ -101,7 +101,7 @@ function Footer() {
                         </div>
                     </div>
 
-                    <div className="rmd:hidden flex w-full items-center gap-5 bg-[#787A91] bg-opacity-40 text-custom-white px-10 py-5 rounded-xl">
+                    <div className="rmd:hidden flex w-full items-center gap-5 bg-[#000] bg-opacity-30 text-custom-white px-10 py-5 rounded-xl">
                         <Link
                             className="block hover:bg-black hover:bg-opacity-20 px-2 py-2 rounded-lg"
                             href={`mailto:${email}`}

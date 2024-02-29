@@ -119,7 +119,7 @@ export default async function page({ params }: pageProps) {
                 </OnLoadWrapperAnimate>
 
                 <OnLoadWrapperAnimate delay={0.4}>
-                    <div className="w-full lg:p-16 lg:pb-0 rlg:p-10 rlg:pb-0 rsm:p-3 mt-10 rsm:mt-5 bg-[#787A91] bg-opacity-20 rounded-2xl rsm:rounded-lg">
+                    <div className="w-full lg:p-16 lg:pb-0 rlg:p-10 rlg:pb-0 rsm:p-3 mt-10 rsm:mt-5 bg-[#000] bg-opacity-30 rounded-2xl rsm:rounded-lg">
                         <Image
                             src={
                                 "https:" +
@@ -148,7 +148,7 @@ export default async function page({ params }: pageProps) {
                     <Paragraph className="mb-10 max-w-[500px]" align="center">
                         {data.fields.descriptions}
                     </Paragraph>
-                    <div className="grid grid-cols-1 gap-6 rsm:grid-cols-1 w-full bg-[#787A91] bg-opacity-20 lg:p-16 p-10 rsm:p-3 rsm:gap-3 rounded-2xl">
+                    <div className="grid grid-cols-1 gap-6 rsm:grid-cols-1 w-full bg-[#000] bg-opacity-30 lg:p-16 p-10 rsm:p-3 rsm:gap-3 rounded-2xl">
                         {data.fields.imageTiles.map((item: any, i: number) => (
                             <Image
                                 key={i}

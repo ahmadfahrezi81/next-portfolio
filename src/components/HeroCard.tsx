@@ -12,7 +12,7 @@ function HeroCard({ data }: any) {
         <HeroCardWrapperAnimate>
             <Link href={`/projects/${data.slug}`}>
                 <div
-                    className="w-full flex-1 rounded-2xl bg-[#787A91] bg-opacity-20 p-12 pb-0 pr-0 rlg:p-10 rlg:pb-0 rlg:pr-0
+                    className="w-full flex-1 rounded-2xl bg-[#000] bg-opacity-30 p-12 pb-0 pr-0 rlg:p-10 rlg:pb-0 rlg:pr-0
                         rsm:p-7 rsm:pb-0 rsm:pr-0"
                 >
                     <Paragraph align="left" className="mb-0">
