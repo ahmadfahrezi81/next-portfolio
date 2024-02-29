@@ -28,9 +28,7 @@ export default async function page() {
     return (
         <>
             <OnLoadWrapperAnimate>
-                <LargeHeading className="mb-14">
-                    I&apos;m Ahmad Fahrezi.
-                </LargeHeading>
+                <LargeHeading className="mb-14">Ahmad Fahrezi.</LargeHeading>
             </OnLoadWrapperAnimate>
 
             <OnLoadWrapperAnimate delay={0.05}>

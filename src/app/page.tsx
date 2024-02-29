@@ -30,11 +30,12 @@ export default async function Home() {
 
     return (
         <>
-            <section className="flex flex-col items-center">
+            <section className="flex flex-col items-center py-8">
                 <OnLoadWrapperAnimate>
                     <LargeHeading className="mb-4">
-                        Hi. I&apos;m Fahrezi.
-                        <br />A Dev. and Designer
+                        Ahmad Fahrezi.
+                        <br />
+                        Developer and Designer
                     </LargeHeading>
                 </OnLoadWrapperAnimate>
                 <OnLoadWrapperAnimate delay={0.05}>
@@ -63,7 +64,7 @@ export default async function Home() {
 
                     <HeroCardWrapperAnimate>
                         <Link href={`/projects/${data[0].fields.slug}`}>
-                            <div className=" rounded-2xl bg-[#000] bg-opacity-30 p-12 pb-0 rlg:p-10 rlg:pb-0  rsm:p-7 rsm:pb-0">
+                            <div className="rounded-[2rem] bg-[#000] bg-opacity-30 p-12 pb-0 rlg:p-10 rlg:pb-0  rsm:p-7 rsm:pb-0">
                                 <Paragraph align="left" className="mb-0">
                                     {data[0].fields.location}
                                 </Paragraph>
