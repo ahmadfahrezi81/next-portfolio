@@ -63,6 +63,12 @@ export default function RootLayout({
                     content="Ahmad Fahrezi: Crafting Excellence in Web Design and Development. Discover purposeful and visually captivating creations."
                 />
                 <meta property="og:url" content="https://ahmadfahrezi.com/" />
+
+                <meta
+                    property="og:image"
+                    content="https://ahmadfahrezi.com/social.png"
+                />
+
                 <meta property="og:image:alt" content="Ahmad Fahrezi" />
 
                 {/* Twitter */}
@@ -79,7 +85,7 @@ export default function RootLayout({
                 />
                 <meta
                     name="twitter:image"
-                    content="https://www.ahmadfahrezi.com/twitter-image.png"
+                    content="https://ahmadfahrezi.com/social.png"
                 />
             </head>
             <body
