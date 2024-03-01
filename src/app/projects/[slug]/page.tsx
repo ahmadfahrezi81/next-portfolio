@@ -119,7 +119,7 @@ export default async function page({ params }: pageProps) {
                 </OnLoadWrapperAnimate>
 
                 <OnLoadWrapperAnimate delay={0.4}>
-                    <div className="w-full lg:p-16 lg:pb-0 rlg:p-10 rlg:pb-0 rsm:p-3 mt-10 rsm:mt-5 bg-[#000] bg-opacity-30 rounded-2xl rsm:rounded-lg">
+                    <div className="w-full lg:p-10 lg:pb-0 rlg:p-10 rlg:pb-0 rsm:p-3 mt-10 rsm:mt-5 bg-[#000] bg-opacity-30 rounded-[1.5rem] rsm:rounded-lg">
                         <Image
                             src={
                                 "https:" +
@@ -141,7 +141,7 @@ export default async function page({ params }: pageProps) {
             </section>
 
             <OnLoadWrapperAnimate delay={0.4}>
-                <div className="h-fit flex justify-center gap-4 rsm:flex-col rsm:items-center mt-6">
+                <div className="h-fit flex justify-center gap-4 rsm:flex-col rsm:items-center mt-[2rem]">
                     {data.fields.links ? (
                         <>
                             {data.fields.links.github ? (
@@ -171,11 +171,12 @@ export default async function page({ params }: pageProps) {
                                         }`}
                                         rel="noopener noreferrer"
                                     >
-                                        <Button className="text-sm">
+                                        <Button className="text-sm ">
                                             Visit Site
                                             <Icons.ExternalLink
                                                 className="ml-2"
                                                 size={16}
+                                                color="#00164F"
                                             />
                                         </Button>
                                     </Link>
@@ -185,13 +186,13 @@ export default async function page({ params }: pageProps) {
                     ) : null}
                 </div>
                 <section className="flex flex-col items-center">
-                    <LargeHeading size="md" className="mt-[5rem] mb-5">
+                    <LargeHeading size="md" className="mt-[6rem] mb-5">
                         More about the project.
                     </LargeHeading>
                     <Paragraph className="mb-10 max-w-[500px]" align="center">
                         {data.fields.descriptions}
                     </Paragraph>
-                    <div className="grid grid-cols-1 gap-6 rsm:grid-cols-1 w-full bg-[#000] bg-opacity-30 lg:p-16 p-10 rsm:p-3 rsm:gap-3 rounded-2xl">
+                    <div className="grid grid-cols-1 gap-10 rsm:grid-cols-1 w-full bg-[#000] bg-opacity-30 lg:p-10 p-10 rsm:p-3 rsm:gap-3 rounded-[1.5rem] mt-[2rem]">
                         {data.fields.imageTiles.map((item: any, i: number) => (
                             <Image
                                 key={i}
