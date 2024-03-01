@@ -98,7 +98,7 @@ export default async function Home() {
                     </div>
                 </section>
                 <section className="flex flex-col items-center">
-                    <LargeHeading className="mt-[5rem] mb-6">
+                    <LargeHeading className="mt-[8rem] mb-6">
                         Notable Projects.
                     </LargeHeading>
                     <Paragraph className="mb-10">
@@ -118,7 +118,7 @@ export default async function Home() {
                     </div>
                     <PressedWrapperAnimate>
                         <Link href="/projects">
-                            <Button className="mt-6 text-sm">
+                            <Button className="mt-[3rem] text-sm">
                                 View Full Project Archive
                                 <Icons.ArrowRight className="ml-2" size={16} />
                             </Button>
