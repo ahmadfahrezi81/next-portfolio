@@ -24,13 +24,13 @@ function Navbar() {
             {/* <Motion /> */}
 
             <div
-                className="flex rsm:justify-between rsm:p-2 rsm:w-[380px]
-            w-fit items-center sm:gap-3 bg-[#000] bg-opacity-30 text-custom-white px-4 py-3 rounded-2xl"
+                className="flex rsm:justify-between rsm:p-2 rsm:w-[360px]
+            w-fit items-center bg-[#000] bg-opacity-30 text-custom-white px-4 py-3 rounded-2xl"
             >
                 <PressedWrapperAnimate>
                     <Link
                         href="/"
-                        className="hover:bg-black hover:bg-opacity-20 px-6 py-2 rounded-lg font-semibold"
+                        className="hover:bg-black hover:bg-opacity-20 px-6 py-2 rsm:px-3 rounded-lg font-semibold"
                     >
                         Home
                     </Link>
@@ -38,7 +38,7 @@ function Navbar() {
 
                 <PressedWrapperAnimate>
                     <Link
-                        className="block hover:bg-black hover:bg-opacity-20 px-6 py-2 rounded-lg font-semibold"
+                        className="block hover:bg-black hover:bg-opacity-20 px-6 py-2 rsm:px-3 rounded-lg font-semibold"
                         href="/projects"
                     >
                         Projects
@@ -47,7 +47,7 @@ function Navbar() {
 
                 <PressedWrapperAnimate>
                     <Link
-                        className="hover:bg-black hover:bg-opacity-20  px-6 py-2 rounded-lg font-semibold"
+                        className="hover:bg-black hover:bg-opacity-20 px-6 py-2 rsm:px-3 rounded-lg font-semibold"
                         href="/about"
                     >
                         About
@@ -57,7 +57,7 @@ function Navbar() {
                 <PressedWrapperAnimate>
                     <CrispChatWrapper>
                         <Link
-                            className="hover:bg-black hover:bg-opacity-20 px-6 py-2 rounded-lg font-semibold"
+                            className="hover:bg-black hover:bg-opacity-20 px-6 py-2 rsm:px-3 rounded-lg font-semibold"
                             href="#"
                             aria-disabled="true"
                         >
