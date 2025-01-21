@@ -28,14 +28,14 @@ function Navbar() {
                 className="flex rsm:justify-between rsm:p-2 rsm:w-[360px]
             w-fit items-center bg-[#000] bg-opacity-30 text-custom-white px-4 py-3 rounded-2xl"
             >
-                {/* <PressedWrapperAnimate>
+                <PressedWrapperAnimate>
                     <Link
                         href="/"
                         className="hover:bg-black hover:bg-opacity-20 px-6 py-2 rsm:px-3 rounded-lg font-semibold"
                     >
                         Home
                     </Link>
-                </PressedWrapperAnimate> */}
+                </PressedWrapperAnimate>
 
                 <PressedWrapperAnimate>
                     <Link

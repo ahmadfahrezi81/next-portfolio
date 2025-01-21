@@ -55,31 +55,47 @@ export default async function page() {
                 <Table>
                     <TableHeader>
                         <TableRow>
-                            <TableHead className="w-[100px]">Year</TableHead>
-                            <TableHead>Name</TableHead>
-                            <TableHead className="rxl:hidden">
-                                Made at
+                            <TableHead className="w-[100px]">
+                                <span className="font-bold text-xl">Year</span>
                             </TableHead>
+                            <TableHead>
+                                <span className="font-bold text-xl">Name</span>
+                            </TableHead>
+                            {/* <TableHead className="rxl:hidden">
+                                <span className="font-bold"> Made at</span>
+                            </TableHead> */}
                             <TableHead className="rmd:hidden">
-                                Built with
+                                <span className="font-bold text-xl">
+                                    Built with
+                                </span>
                             </TableHead>
-                            <TableHead className="rsm:hidden">Links</TableHead>
+                            <TableHead>
+                                <span className="font-bold text-xl">Links</span>
+                            </TableHead>
                         </TableRow>
                     </TableHeader>
                     <TableBody>
                         {data.map((item: any) => (
                             <TableRow key={item.sys.id}>
-                                <TableCell>{item.fields.year}</TableCell>
-                                <TableCell>{item.fields.title}</TableCell>
-                                <TableCell className="rxl:hidden">
-                                    {item.fields.location}
+                                <TableCell>
+                                    <span className="font-medium">
+                                        {item.fields.year}
+                                    </span>
                                 </TableCell>
+                                <TableCell>
+                                    <span className="italic">
+                                        {item.fields.title}
+                                    </span>
+                                </TableCell>
+                                {/* <TableCell className="rxl:hidden">
+                                    {item.fields.location}
+                                </TableCell> */}
                                 <TableCell className="rmd:hidden">
                                     {item.fields.techStack.map(
                                         (item: string, i: number) => (
                                             <span
                                                 key={i}
-                                                className="inline-block bg-black m-1 p-2 px-3 bg-opacity-30 rounded-full"
+                                                className="inline-block bg-black m-1 p-2 px-3 bg-opacity-30 rounded-lg"
                                             >
                                                 {item}
                                             </span>

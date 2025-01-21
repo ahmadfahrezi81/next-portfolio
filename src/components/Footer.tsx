@@ -29,7 +29,7 @@ function Footer() {
                 flex flex-col gap-7 justify-center rmd:items-center rsm:p-10 relative"
                     >
                         <LargeHeading align="left" className="rsm:text-center">
-                            Let&apos;s chat.
+                            Let&apos;s chat. 👋
                         </LargeHeading>
                         <Icons.Send
                             className="text-white absolute rmd:hidden top-16 right-14"

@@ -56,7 +56,7 @@ export default async function Home() {
                             aria-disabled="true"
                         >
                             {/* <CrispChatWrapper> */}
-                            <Button className="mt-6 bg-[#FFCA3B]">
+                            <Button className="mt-6 bg-custom-accent-yellow">
                                 Let&apos;s chat{" "}
                                 <Icons.MessagesSquare
                                     className="ml-4"
