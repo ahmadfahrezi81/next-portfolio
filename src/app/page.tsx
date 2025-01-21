@@ -30,12 +30,13 @@ export default async function Home() {
 
     return (
         <>
-            <section className="flex flex-col items-center py-8">
+            <section className="flex flex-col items-center">
                 <OnLoadWrapperAnimate>
+                    <Paragraph className="mb-[-10]">Hello there 👋</Paragraph>
                     <LargeHeading className="mb-4">
-                        Ahmad Fahrezi.
+                        My name is
                         <br />
-                        Developer and Designer
+                        Ahmad Fahrezi.
                     </LargeHeading>
                 </OnLoadWrapperAnimate>
                 <OnLoadWrapperAnimate delay={0.05}>
@@ -102,8 +103,7 @@ export default async function Home() {
                         Notable Projects.
                     </LargeHeading>
                     <Paragraph className="mb-10">
-                        Here are some other noteworthy projects I&apos;ve been
-                        involved in.
+                        Here are some other fun projects I&apos;ve created.
                     </Paragraph>
                     {/* <Paragraph className="mb-10">
                         Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum

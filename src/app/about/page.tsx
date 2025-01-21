@@ -5,7 +5,7 @@ import React from "react";
 import Icons from "@/components/Icons";
 import { createClient } from "contentful";
 import Image from "next/image";
-import Profile from "@/public/Profile2.png";
+import Profile from "@/public/Profile3.jpg";
 import ParallaxText from "@/components/ParallaxText";
 import OnLoadWrapperAnimate from "@/components/OnLoadWrapperAnimate";
 
@@ -28,6 +28,7 @@ export default async function page() {
     return (
         <>
             <OnLoadWrapperAnimate>
+                <Paragraph className="mb-[-10]">Hello my name is</Paragraph>
                 <LargeHeading className="mb-14">Ahmad Fahrezi.</LargeHeading>
             </OnLoadWrapperAnimate>
 
@@ -37,7 +38,7 @@ export default async function page() {
                         <Image
                             src={Profile}
                             height={400}
-                            width={350}
+                            width={450}
                             alt="Profile Image"
                             className="bg-blue-100 rounded-lg"
                         />
@@ -48,25 +49,27 @@ export default async function page() {
                             align="left"
                             className="rmd:text-center"
                         >
-                            Full Stack Developer <br /> and Designer
+                            Coding for Mobile & Web
                         </LargeHeading>
                         <Paragraph
                             align="left"
                             className="rmd:text-center max-w-[500px]"
                         >
-                            Crafting visually appealing and functional creations
-                            is my passion. With more than three years of
-                            experience as a web developer/designer, I specialize
-                            in designing intuitive interfaces, crafting
-                            prototypes, and coding solutions.
+                            Hello, fellow digital adventurer! I’m a creator who
+                            thrives on turning ideas into dazzling digital
+                            realities. Whether it’s crafting sleek web
+                            interfaces or building seamless mobile experiences,
+                            I blend creativity with tech expertise to deliver
+                            solutions that not only function but also delight.
                         </Paragraph>
                         <Paragraph
                             align="left"
                             className="rmd:text-center max-w-[500px]"
                         >
-                            Rest assured, I am well-prepared to support you and
-                            offer direction in shaping your perfect digital
-                            brand.
+                            I’m passionate about pushing boundaries and
+                            partnering with you to shape an extraordinary online
+                            presence that captures your brand’s essence.
+                            Together, let’s make something spectacular!
                         </Paragraph>
                     </div>
                 </section>
@@ -104,11 +107,11 @@ export default async function page() {
                             </ParallaxText>
                             <ParallaxText baseVelocity={1}>
                                 Java . Python . Firebase . MongoDB . Git . PHP .
-                                RemixJS .
+                                RemixJS . GoLang .
                             </ParallaxText>
                             <ParallaxText baseVelocity={-1}>
                                 Java . Python . Firebase . MongoDB . Git . PHP .
-                                RemixJS .
+                                RemixJS . GoLang .
                             </ParallaxText>
                         </div>
                     </div>

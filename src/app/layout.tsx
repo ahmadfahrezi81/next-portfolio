@@ -3,10 +3,8 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Navbar from "@/components/Navbar";
-import dynamic from "next/dynamic";
 import { Toaster } from "@/components/ui/Toast";
 import { Analytics } from "@vercel/analytics/react";
-import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -93,7 +91,7 @@ export default function RootLayout({
             >
                 <Navbar />
 
-                <section className="mt-24 rsm:mt-12"> {children}</section>
+                <section className="mt-14 rsm:mt-12"> {children}</section>
 
                 <Toaster position="bottom-right" />
                 <Analytics />
