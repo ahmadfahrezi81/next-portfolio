@@ -64,7 +64,7 @@ export default function RootLayout({
 
                 <meta
                     property="og:image"
-                    content="https://ahmadfahrezi.com/social.png"
+                    content="https://ahmadfahrezi.com/social2.png"
                 />
 
                 <meta property="og:image:alt" content="Ahmad Fahrezi" />
@@ -83,7 +83,7 @@ export default function RootLayout({
                 />
                 <meta
                     name="twitter:image"
-                    content="https://ahmadfahrezi.com/social.png"
+                    content="https://ahmadfahrezi.com/social2.png"
                 />
             </head>
             <body
