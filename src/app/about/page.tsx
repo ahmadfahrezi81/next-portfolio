@@ -49,27 +49,25 @@ export default async function page() {
                             align="left"
                             className="rmd:text-center"
                         >
-                            Coding for Mobile & Web
+                            Coding for Mobile & Web 🧑‍💻
                         </LargeHeading>
                         <Paragraph
                             align="left"
-                            className="rmd:text-center max-w-[500px]"
+                            className="rmd:text-center max-w-[480px]"
                         >
-                            Hello, fellow digital adventurer! I’m a creator who
-                            thrives on turning ideas into dazzling digital
-                            realities. Whether it’s crafting sleek web
-                            interfaces or building seamless mobile experiences,
-                            I blend creativity with tech expertise to deliver
-                            solutions that not only function but also delight.
+                            Hello! I&apos;m a software developer focused on
+                            transforming ideas into digital solutions. I
+                            specialize in intuitive web interfaces and mobile
+                            experiences, blending creativity and technical
+                            skill.
                         </Paragraph>
                         <Paragraph
                             align="left"
-                            className="rmd:text-center max-w-[500px]"
+                            className="rmd:text-center max-w-[490px]"
                         >
-                            I’m passionate about pushing boundaries and
-                            partnering with you to shape an extraordinary online
-                            presence that captures your brand’s essence.
-                            Together, let’s make something spectacular!
+                            I&apos;m passionate about using technology to solve
+                            problems. Let&apos;s create impactful digital
+                            products together!
                         </Paragraph>
                     </div>
                 </section>
