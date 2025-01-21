@@ -14,7 +14,7 @@ import Logo from "@/public/Logo3.svg";
 import OnLoadWrapperAnimate from "@/components/OnLoadWrapperAnimate";
 import PressedWrapperAnimate from "@/components/PressedWrapperAnimate";
 
-const email = "ahmadfahrezi8127@gmail.com";
+export const email = "ahmadfahrezi.kl@gmail.com";
 
 function Footer() {
     const [toggleShow, setToggleShow] = useState(false);
@@ -41,7 +41,13 @@ function Footer() {
                             <br className="rsm:hidden" /> Feel free to say hi!
                         </Paragraph>
                         <PressedWrapperAnimate>
-                            <CrispChatWrapper>
+                            {/* <CrispChatWrapper> */}
+                            <Link
+                                href={
+                                    `mailto:${email}` /* Make sure 'email' is defined somewhere in your component */
+                                }
+                                aria-disabled="true"
+                            >
                                 <Button className="mt-6">
                                     Say Hello
                                     <Icons.MessagesSquare
@@ -49,7 +55,8 @@ function Footer() {
                                         size={25}
                                     />
                                 </Button>
-                            </CrispChatWrapper>
+                            </Link>
+                            {/* </CrispChatWrapper> */}
                         </PressedWrapperAnimate>
                     </div>
                     <div className="rxl:hidden p-4 w-[40rem] h-fit bg-[#000] bg-opacity-30 rounded-2xl rsm:hidden">

@@ -11,6 +11,8 @@ import OnLoadWrapperAnimate from "@/components/OnLoadWrapperAnimate";
 import PressedWrapperAnimate from "@/components/PressedWrapperAnimate";
 import HeroCardWrapperAnimate from "@/components/HeroCardWrapperAnimate";
 
+const email = "ahmadfahrezi.kl@gmail.com";
+
 async function getData() {
     const client = createClient({
         space: process.env.CONTENTFUL_SPACE_ID!,
@@ -47,15 +49,22 @@ export default async function Home() {
 
                 <OnLoadWrapperAnimate delay={0.1}>
                     <PressedWrapperAnimate>
-                        <CrispChatWrapper>
-                            <Button className="mt-6">
+                        <Link
+                            href={
+                                `mailto:${email}` /* Make sure 'email' is defined somewhere in your component */
+                            }
+                            aria-disabled="true"
+                        >
+                            {/* <CrispChatWrapper> */}
+                            <Button className="mt-6 bg-[#FFCA3B]">
                                 Let&apos;s chat{" "}
                                 <Icons.MessagesSquare
                                     className="ml-4"
                                     size={25}
                                 />
                             </Button>
-                        </CrispChatWrapper>
+                            {/* </CrispChatWrapper> */}
+                        </Link>
                     </PressedWrapperAnimate>
                 </OnLoadWrapperAnimate>
             </section>

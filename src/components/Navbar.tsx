@@ -5,6 +5,7 @@ import Image from "next/image";
 import CrispChatWrapper from "./CrispChatWrapper";
 import Logo from "@/public/Logo3.svg";
 import PressedWrapperAnimate from "@/components/PressedWrapperAnimate";
+import { email } from "./Footer";
 
 function Navbar() {
     return (
@@ -27,12 +28,21 @@ function Navbar() {
                 className="flex rsm:justify-between rsm:p-2 rsm:w-[360px]
             w-fit items-center bg-[#000] bg-opacity-30 text-custom-white px-4 py-3 rounded-2xl"
             >
-                <PressedWrapperAnimate>
+                {/* <PressedWrapperAnimate>
                     <Link
                         href="/"
                         className="hover:bg-black hover:bg-opacity-20 px-6 py-2 rsm:px-3 rounded-lg font-semibold"
                     >
                         Home
+                    </Link>
+                </PressedWrapperAnimate> */}
+
+                <PressedWrapperAnimate>
+                    <Link
+                        className="hover:bg-black hover:bg-opacity-20 px-6 py-2 rsm:px-3 rounded-lg font-semibold"
+                        href="/about"
+                    >
+                        About
                     </Link>
                 </PressedWrapperAnimate>
 
@@ -48,13 +58,14 @@ function Navbar() {
                 <PressedWrapperAnimate>
                     <Link
                         className="hover:bg-black hover:bg-opacity-20 px-6 py-2 rsm:px-3 rounded-lg font-semibold"
-                        href="/about"
+                        href={`mailto:${email}`}
+                        aria-disabled="true"
                     >
-                        About
+                        Contact
                     </Link>
                 </PressedWrapperAnimate>
 
-                <PressedWrapperAnimate>
+                {/* <PressedWrapperAnimate>
                     <CrispChatWrapper>
                         <Link
                             className="hover:bg-black hover:bg-opacity-20 px-6 py-2 rsm:px-3 rounded-lg font-semibold"
@@ -64,7 +75,7 @@ function Navbar() {
                             Contact
                         </Link>
                     </CrispChatWrapper>
-                </PressedWrapperAnimate>
+                </PressedWrapperAnimate> */}
             </div>
         </nav>
     );
