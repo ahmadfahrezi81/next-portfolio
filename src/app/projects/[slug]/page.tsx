@@ -169,7 +169,7 @@ export default async function page({ params }: pageProps) {
             </section>
 
             <OnLoadWrapperAnimate delay={0.4}>
-                <div className="h-fit flex justify-center gap-4 rsm:flex-col rsm:items-center mt-[2rem]">
+                <div className="h-fit flex justify-center gap-4 rsm:flex-col rsm:items-center mt-4">
                     {data.fields.links ? (
                         <>
                             {data.fields.links.github ? (
@@ -179,12 +179,12 @@ export default async function page({ params }: pageProps) {
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
-                                        <Button className="text-sm bg-white rsm:w-fit">
-                                            View Code
+                                        <Button className="text-base bg-custom-black text-custom-white rsm:w-fit">
+                                            View code
                                             <Icons.Github
                                                 className="ml-2"
-                                                size={20}
-                                                color="#00164F"
+                                                size={22}
+                                                color="#FEFBF6"
                                             />
                                         </Button>
                                     </Link>
@@ -197,14 +197,15 @@ export default async function page({ params }: pageProps) {
                                         href={`${
                                             data.fields.links.external ?? null
                                         }`}
+                                        target="_blank"
                                         rel="noopener noreferrer"
                                     >
-                                        <Button className="text-sm ">
-                                            Visit Site
-                                            <Icons.ExternalLink
+                                        <Button className="text-base bg-custom-accent-yellow text-custom-black rsm:w-fit">
+                                            Visit site
+                                            <Icons.Globe2
                                                 className="ml-2"
-                                                size={16}
-                                                color="#00164F"
+                                                size={22}
+                                                color="#262523"
                                             />
                                         </Button>
                                     </Link>
@@ -233,20 +234,6 @@ export default async function page({ params }: pageProps) {
                                 alt="image"
                                 className="w-full rounded-[1rem] rsm:rounded-[0.2rem]"
                             />
-                            // <div key={i}>
-                            //     <Image
-                            //         src={"https:" + item.fields.file.url}
-                            //         width={item.fields.file.details.image.width}
-                            //         height={
-                            //             item.fields.file.details.image.height
-                            //         }
-                            //         alt="image"
-                            //         className="w-full rounded-[1rem] rsm:rounded-[0.2rem]"
-                            //     />
-                            //     {i < data.fields.imageTiles.length - 1 && (
-                            //         <div className="mt-4 border-t border-custom-accent-yellow"></div> // This is the divider
-                            //     )}
-                            // </div>
                         ))}
                     </div>
                     {/* <div className="grid grid-cols-1 gap-10 rsm:grid-cols-1 w-full bg-[#000] bg-opacity-30 lg:p-10 p-10 rsm:p-3 rsm:gap-3 rounded-[1.5rem] mt-[2rem]">
