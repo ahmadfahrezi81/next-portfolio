@@ -167,8 +167,7 @@ export default async function page({ params }: pageProps) {
                     </div>
                 </OnLoadWrapperAnimate>
             </section>
-
-            <OnLoadWrapperAnimate delay={0.4}>
+            <OnLoadWrapperAnimate delay={0.6}>
                 <div className="h-fit flex justify-center gap-4 rsm:flex-col rsm:items-center mt-4">
                     {data.fields.links ? (
                         <>
@@ -214,29 +213,30 @@ export default async function page({ params }: pageProps) {
                         </>
                     ) : null}
                 </div>
-                <section className="flex flex-col items-center">
-                    <LargeHeading size="md" className="mt-[6rem]">
-                        About the project.
-                    </LargeHeading>
-                    <Paragraph
-                        className="max-w-[700px] mt-3 rsm:mt-1"
-                        align="center"
-                    >
-                        {data.fields.descriptions}
-                    </Paragraph>
-                    <div className="grid grid-cols-1 gap-4 rsm:gap-2 rsm:grid-cols-1 w-full mt-6 rsm:mt-4 p-2 rsm:p-1  rounded-[1.5rem] rsm:rounded-[0.5rem] bg-black bg-opacity-40">
-                        {data.fields.imageTiles.map((item: any, i: number) => (
-                            <Image
-                                key={i}
-                                src={"https:" + item.fields.file.url}
-                                width={item.fields.file.details.image.width}
-                                height={item.fields.file.details.image.height}
-                                alt="image"
-                                className="w-full rounded-[1rem] rsm:rounded-[0.2rem]"
-                            />
-                        ))}
-                    </div>
-                    {/* <div className="grid grid-cols-1 gap-10 rsm:grid-cols-1 w-full bg-[#000] bg-opacity-30 lg:p-10 p-10 rsm:p-3 rsm:gap-3 rounded-[1.5rem] mt-[2rem]">
+            </OnLoadWrapperAnimate>
+            <section className="flex flex-col items-center">
+                <LargeHeading size="md" className="mt-[6rem]">
+                    About the project.
+                </LargeHeading>
+                <Paragraph
+                    className="max-w-[700px] mt-3 rsm:mt-1"
+                    align="center"
+                >
+                    {data.fields.descriptions}
+                </Paragraph>
+                <div className="grid grid-cols-1 gap-4 rsm:gap-2 rsm:grid-cols-1 w-full mt-6 rsm:mt-4 p-2 rsm:p-1  rounded-[1.5rem] rsm:rounded-[0.5rem] bg-black bg-opacity-40">
+                    {data.fields.imageTiles.map((item: any, i: number) => (
+                        <Image
+                            key={i}
+                            src={"https:" + item.fields.file.url}
+                            width={item.fields.file.details.image.width}
+                            height={item.fields.file.details.image.height}
+                            alt="image"
+                            className="w-full rounded-[1rem] rsm:rounded-[0.2rem]"
+                        />
+                    ))}
+                </div>
+                {/* <div className="grid grid-cols-1 gap-10 rsm:grid-cols-1 w-full bg-[#000] bg-opacity-30 lg:p-10 p-10 rsm:p-3 rsm:gap-3 rounded-[1.5rem] mt-[2rem]">
                         {data.fields.imageTiles.map((item: any, i: number) => (
                             <Image
                                 key={i}
@@ -248,8 +248,7 @@ export default async function page({ params }: pageProps) {
                             />
                         ))}
                     </div> */}
-                </section>
-            </OnLoadWrapperAnimate>
+            </section>
         </>
     );
 }

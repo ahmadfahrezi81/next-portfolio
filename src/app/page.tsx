@@ -127,9 +127,9 @@ export default async function Home() {
                     </div>
                     <PressedWrapperAnimate>
                         <Link href="/projects">
-                            <Button className="mt-[3rem] text-sm">
+                            <Button className="mt-[3rem] text-base">
                                 View Full Project Archive
-                                <Icons.ArrowRight className="ml-2" size={16} />
+                                <Icons.ArrowRight className="ml-2" size={20} />
                             </Button>
                         </Link>
                     </PressedWrapperAnimate>
