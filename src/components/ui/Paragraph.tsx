@@ -13,10 +13,16 @@ const paragraphVariants = cva("text-custom-white mb-2", {
             center: "text-center",
             right: "text-right",
         },
+        font: {
+            default: "font-sans",
+            mono: "font-mono",
+            serif: "font-serif",
+        },
     },
     defaultVariants: {
         size: "default",
         align: "center",
+        font: "default",
     },
 });
 
@@ -25,12 +31,14 @@ interface ParagraphProps
         VariantProps<typeof paragraphVariants> {}
 
 const Paragraph = React.forwardRef<HTMLParagraphElement, ParagraphProps>(
-    ({ className, size, align, children, ...props }, ref) => {
+    ({ className, size, align, font, children, ...props }, ref) => {
         return (
             <p
                 ref={ref}
                 {...props}
-                className={cn(paragraphVariants({ size, align, className }))}
+                className={cn(
+                    paragraphVariants({ size, align, className, font })
+                )}
             >
                 {children}
             </p>

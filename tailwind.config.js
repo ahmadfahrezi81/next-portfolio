@@ -8,6 +8,11 @@ module.exports = {
         "./src/**/*.{ts,tsx}",
     ],
     theme: {
+        fontFamily: {
+            sans: ["Inter", "ui-sans-serif", "system-ui"],
+            serif: ["Georgia", "ui-serif", "serif"],
+            mono: ["Menlo", "ui-monospace", "monospace"],
+        },
         screens: {
             sm: "640px",
             // => @media (min-width: 640px) { ... }

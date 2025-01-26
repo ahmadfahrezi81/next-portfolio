@@ -92,16 +92,21 @@ export default async function page({ params }: pageProps) {
         <>
             <section className="flex flex-col items-center">
                 <OnLoadWrapperAnimate>
+                    <Paragraph className="w-full" font={"mono"}>
+                        {data.fields.location} | Built in {data.fields.year}
+                    </Paragraph>
+                </OnLoadWrapperAnimate>
+                <OnLoadWrapperAnimate delay={0.05}>
                     <LargeHeading className="mb-2">
                         {data.fields.title}
                     </LargeHeading>
                 </OnLoadWrapperAnimate>
-                <OnLoadWrapperAnimate delay={0.05}>
+                {/* <OnLoadWrapperAnimate delay={0.05}>
                     <Paragraph className="w-full">
                         {data.fields.location} | {data.fields.developmentTypes}{" "}
                         | {data.fields.year}
                     </Paragraph>
-                </OnLoadWrapperAnimate>
+                </OnLoadWrapperAnimate> */}
 
                 <OnLoadWrapperAnimate delay={0.1}>
                     <Paragraph className="w-full">
@@ -118,7 +123,7 @@ export default async function page({ params }: pageProps) {
                     </Paragraph>
                 </OnLoadWrapperAnimate>
 
-                <OnLoadWrapperAnimate delay={0.4}>
+                {/* <OnLoadWrapperAnimate delay={0.4}>
                     <div className="w-full lg:p-10 lg:pb-0 rlg:p-10 rlg:pb-0 rsm:p-3 mt-10 rsm:mt-5 bg-[#000] bg-opacity-30 rounded-[1.5rem] rsm:rounded-lg">
                         <Image
                             src={
@@ -135,6 +140,29 @@ export default async function page({ params }: pageProps) {
                             }
                             alt="Feature Image"
                             className="rounded-lg rounded-b-none rsm:rounded w-[100vw]"
+                        />
+                    </div>
+                </OnLoadWrapperAnimate> */}
+                <OnLoadWrapperAnimate delay={0.4}>
+                    <div
+                        className="w-full mt-5 rsm:mt-3 rounded-[1.5rem] rsm:rounded-[0.5rem] p-2 rsm:p-1 border border-custom-accent-yellow border-opacity-70 bg-black bg-opacity-40
+                    "
+                    >
+                        <Image
+                            src={
+                                "https:" +
+                                data.fields.featureImage.fields.file.url
+                            }
+                            width={
+                                data.fields.featureImage.fields.file.details
+                                    .image.width
+                            }
+                            height={
+                                data.fields.featureImage.fields.file.details
+                                    .image.height
+                            }
+                            alt="Feature Image"
+                            className="rounded-[1rem] rsm:rounded-[0.2rem] w-[100vw]"
                         />
                     </div>
                 </OnLoadWrapperAnimate>
@@ -187,12 +215,38 @@ export default async function page({ params }: pageProps) {
                 </div>
                 <section className="flex flex-col items-center">
                     <LargeHeading size="md" className="mt-[6rem] mb-5">
-                        More about the project.
+                        About the project.
                     </LargeHeading>
-                    <Paragraph className="mb-10 max-w-[500px]" align="center">
+                    <Paragraph className="max-w-[700px]" align="center">
                         {data.fields.descriptions}
                     </Paragraph>
-                    <div className="grid grid-cols-1 gap-10 rsm:grid-cols-1 w-full bg-[#000] bg-opacity-30 lg:p-10 p-10 rsm:p-3 rsm:gap-3 rounded-[1.5rem] mt-[2rem]">
+                    <div className="grid grid-cols-1 gap-4 rsm:grid-cols-1 w-full mt-5 rsm:mt-3 p-2 rsm:p-1 rsm:gap-3 rounded-[1.5rem] rsm:rounded-[0.5rem] bg-black bg-opacity-40">
+                        {data.fields.imageTiles.map((item: any, i: number) => (
+                            <Image
+                                key={i}
+                                src={"https:" + item.fields.file.url}
+                                width={item.fields.file.details.image.width}
+                                height={item.fields.file.details.image.height}
+                                alt="image"
+                                className="w-full rounded-[1rem] rsm:rounded-[0.2rem]"
+                            />
+                            // <div key={i}>
+                            //     <Image
+                            //         src={"https:" + item.fields.file.url}
+                            //         width={item.fields.file.details.image.width}
+                            //         height={
+                            //             item.fields.file.details.image.height
+                            //         }
+                            //         alt="image"
+                            //         className="w-full rounded-[1rem] rsm:rounded-[0.2rem]"
+                            //     />
+                            //     {i < data.fields.imageTiles.length - 1 && (
+                            //         <div className="mt-4 border-t border-custom-accent-yellow"></div> // This is the divider
+                            //     )}
+                            // </div>
+                        ))}
+                    </div>
+                    {/* <div className="grid grid-cols-1 gap-10 rsm:grid-cols-1 w-full bg-[#000] bg-opacity-30 lg:p-10 p-10 rsm:p-3 rsm:gap-3 rounded-[1.5rem] mt-[2rem]">
                         {data.fields.imageTiles.map((item: any, i: number) => (
                             <Image
                                 key={i}
@@ -203,7 +257,7 @@ export default async function page({ params }: pageProps) {
                                 className="w-full rounded-lg"
                             />
                         ))}
-                    </div>
+                    </div> */}
                 </section>
             </OnLoadWrapperAnimate>
         </>
