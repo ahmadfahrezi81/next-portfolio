@@ -59,7 +59,7 @@ function Navbar() {
                 <PressedWrapperAnimate>
                     <Link
                         className={`${
-                            pathname === "/projects"
+                            pathname.startsWith("/projects")
                                 ? "bg-black bg-opacity-20"
                                 : ""
                         } hover:bg-black hover:bg-opacity-20 px-6 py-2 rsm:px-3 rounded-lg font-semibold`}
@@ -69,15 +69,15 @@ function Navbar() {
                     </Link>
                 </PressedWrapperAnimate>
 
-                {/* <PressedWrapperAnimate>
+                <PressedWrapperAnimate>
                     <Link
-                        className="hover:bg-black hover:bg-opacity-20 px-6 py-2 rsm:px-3 rounded-lg font-semibold"
+                        className="hover:bg-black hover:bg-opacity-20 px-6 py-2 rsm:px-3 rounded-lg font-semibold sm:hidden"
                         href={`mailto:${email}`}
                         aria-disabled="true"
                     >
                         Contact
                     </Link>
-                </PressedWrapperAnimate> */}
+                </PressedWrapperAnimate>
 
                 {/* <PressedWrapperAnimate>
                     <CrispChatWrapper>

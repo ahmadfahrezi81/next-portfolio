@@ -145,7 +145,7 @@ export default async function page({ params }: pageProps) {
                 </OnLoadWrapperAnimate> */}
                 <OnLoadWrapperAnimate delay={0.4}>
                     <div
-                        className="w-full mt-5 rsm:mt-3 rounded-[1.5rem] rsm:rounded-[0.5rem] p-2 rsm:p-1 border border-custom-accent-yellow border-opacity-70 bg-black bg-opacity-40
+                        className="w-full mt-5 rsm:mt-3 rounded-[1.5rem] rsm:rounded-[0.5rem] p-2 rsm:p-1 border border-white border-opacity-50 bg-black bg-opacity-40
                     "
                     >
                         <Image
@@ -214,13 +214,16 @@ export default async function page({ params }: pageProps) {
                     ) : null}
                 </div>
                 <section className="flex flex-col items-center">
-                    <LargeHeading size="md" className="mt-[6rem] mb-5">
+                    <LargeHeading size="md" className="mt-[6rem]">
                         About the project.
                     </LargeHeading>
-                    <Paragraph className="max-w-[700px]" align="center">
+                    <Paragraph
+                        className="max-w-[700px] mt-3 rsm:mt-1"
+                        align="center"
+                    >
                         {data.fields.descriptions}
                     </Paragraph>
-                    <div className="grid grid-cols-1 gap-4 rsm:grid-cols-1 w-full mt-5 rsm:mt-3 p-2 rsm:p-1 rsm:gap-3 rounded-[1.5rem] rsm:rounded-[0.5rem] bg-black bg-opacity-40">
+                    <div className="grid grid-cols-1 gap-4 rsm:gap-2 rsm:grid-cols-1 w-full mt-6 rsm:mt-4 p-2 rsm:p-1  rounded-[1.5rem] rsm:rounded-[0.5rem] bg-black bg-opacity-40">
                         {data.fields.imageTiles.map((item: any, i: number) => (
                             <Image
                                 key={i}
