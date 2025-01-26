@@ -28,8 +28,8 @@ function Navbar() {
             {/* <Motion /> */}
 
             <div
-                className="flex rsm:justify-between rsm:p-2 rsm:w-[360px]
-            w-fit items-center bg-[#000] bg-opacity-30 text-custom-white px-4 py-5 rounded-2xl space-x-1 rsm:space-x-0"
+                className="flex rsm:justify-between rsm:w-[360px]
+            w-fit items-center bg-[#000] bg-opacity-30 text-custom-white px-4 py-5 rounded-2xl space-x-2 rsm:space-x-0"
             >
                 <PressedWrapperAnimate>
                     <Link
