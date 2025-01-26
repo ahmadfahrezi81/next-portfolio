@@ -7,7 +7,7 @@ export default function HeroCardWrapperAnimate({ children }: any) {
         <>
             <motion.div
                 className="w-fit "
-                whileHover={{ y: -10, scale: 1.02 }}
+                whileHover={{ y: -10, scale: 1.01 }}
                 whileTap={{ scale: 0.95 }}
                 transition={{
                     duration: 0.2,

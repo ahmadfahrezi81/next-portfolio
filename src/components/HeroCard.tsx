@@ -11,11 +11,8 @@ function HeroCard({ data }: any) {
     return (
         <HeroCardWrapperAnimate>
             <Link href={`/projects/${data.slug}`}>
-                <div
-                    className="w-full flex-1 rounded-[2rem] bg-[#000] bg-opacity-30 p-12 pb-0 pr-0 rlg:p-10 rlg:pb-0 rlg:pr-0
-                        rsm:p-7 rsm:pb-0 rsm:pr-0"
-                >
-                    <Paragraph align="left" className="mb-0">
+                <div className="w-full flex-1 rounded-[1.5rem] rsm:rounded-[1rem] bg-[#000] bg-opacity-30 p-12 pb-0 pr-0 rlg:p-10 rlg:pb-0 rlg:pr-0 rsm:p-7 rsm:pb-0 rsm:pr-0">
+                    <Paragraph align="left" className="mb-0 font">
                         {data.location}
                     </Paragraph>
                     <LargeHeading align="left" size="md" className="mb-8">
