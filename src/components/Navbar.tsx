@@ -2,12 +2,15 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import CrispChatWrapper from "./CrispChatWrapper";
+import { usePathname } from "next/navigation";
+// import CrispChatWrapper from "./CrispChatWrapper";
 import Logo from "@/public/Logo3.svg";
 import PressedWrapperAnimate from "@/components/PressedWrapperAnimate";
 import { email } from "./Footer";
 
 function Navbar() {
+    const pathname = usePathname();
+
     return (
         <nav className="py-5 mt-2 flex rsm:justify-center justify-between items-center">
             <PressedWrapperAnimate>
@@ -26,12 +29,14 @@ function Navbar() {
 
             <div
                 className="flex rsm:justify-between rsm:p-2 rsm:w-[360px]
-            w-fit items-center bg-[#000] bg-opacity-30 text-custom-white px-4 py-3 rounded-2xl"
+            w-fit items-center bg-[#000] bg-opacity-30 text-custom-white px-4 py-5 rounded-2xl space-x-1 rsm:space-x-0"
             >
                 <PressedWrapperAnimate>
                     <Link
                         href="/"
-                        className="hover:bg-black hover:bg-opacity-20 px-6 py-2 rsm:px-3 rounded-lg font-semibold"
+                        className={`${
+                            pathname === "/" ? "bg-black bg-opacity-20" : ""
+                        } hover:bg-black hover:bg-opacity-20 px-6 py-2 rsm:px-3 rounded-lg font-semibold`}
                     >
                         Home
                     </Link>
@@ -39,7 +44,12 @@ function Navbar() {
 
                 <PressedWrapperAnimate>
                     <Link
-                        className="hover:bg-black hover:bg-opacity-20 px-6 py-2 rsm:px-3 rounded-lg font-semibold"
+                        // className="hover:bg-black hover:bg-opacity-20 px-6 py-2 rsm:px-3 rounded-lg font-semibold"
+                        className={`${
+                            pathname === "/about"
+                                ? "bg-black bg-opacity-20"
+                                : ""
+                        } hover:bg-black hover:bg-opacity-20 px-6 py-2 rsm:px-3 rounded-lg font-semibold`}
                         href="/about"
                     >
                         About
@@ -48,14 +58,18 @@ function Navbar() {
 
                 <PressedWrapperAnimate>
                     <Link
-                        className="block hover:bg-black hover:bg-opacity-20 px-6 py-2 rsm:px-3 rounded-lg font-semibold"
+                        className={`${
+                            pathname === "/projects"
+                                ? "bg-black bg-opacity-20"
+                                : ""
+                        } hover:bg-black hover:bg-opacity-20 px-6 py-2 rsm:px-3 rounded-lg font-semibold`}
                         href="/projects"
                     >
                         Projects
                     </Link>
                 </PressedWrapperAnimate>
 
-                <PressedWrapperAnimate>
+                {/* <PressedWrapperAnimate>
                     <Link
                         className="hover:bg-black hover:bg-opacity-20 px-6 py-2 rsm:px-3 rounded-lg font-semibold"
                         href={`mailto:${email}`}
@@ -63,7 +77,7 @@ function Navbar() {
                     >
                         Contact
                     </Link>
-                </PressedWrapperAnimate>
+                </PressedWrapperAnimate> */}
 
                 {/* <PressedWrapperAnimate>
                     <CrispChatWrapper>

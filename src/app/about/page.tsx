@@ -28,7 +28,7 @@ export default async function page() {
     return (
         <>
             <OnLoadWrapperAnimate>
-                <Paragraph className="mb-[-10]">Hello my name is</Paragraph>
+                <Paragraph className="mb-[-10]">Hello, my name is</Paragraph>
                 <LargeHeading className="mb-14">Ahmad Fahrezi.</LargeHeading>
             </OnLoadWrapperAnimate>
 
@@ -49,7 +49,7 @@ export default async function page() {
                             align="left"
                             className="rmd:text-center"
                         >
-                            Coding for Mobile & Web 🧑‍💻
+                            Coding for Mobile & Web. 🧑‍💻
                         </LargeHeading>
                         <Paragraph
                             align="left"
