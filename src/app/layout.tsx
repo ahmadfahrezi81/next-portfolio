@@ -88,7 +88,7 @@ export default function RootLayout({
                 />
             </head>
             <body
-                className={`${inter.className} mx-auto max-w-[1400px] rsm:px-4 rmd:px-8 rlg:px-12 px-24 bg-custom-blue`}
+                className={`${inter.className} mx-auto max-w-[1200px] rsm:px-4 rmd:px-8 rlg:px-12 px-8 bg-custom-blue`}
             >
                 <OnLoadWrapperAnimate delay={0.1}>
                     <Navbar />

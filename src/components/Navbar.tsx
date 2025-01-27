@@ -12,7 +12,7 @@ function Navbar() {
     const pathname = usePathname();
 
     return (
-        <nav className="py-5 mt-2 flex rsm:justify-center justify-between items-center">
+        <nav className="py-8 flex rsm:justify-center justify-between items-center">
             <PressedWrapperAnimate>
                 <Link href="/">
                     <Image

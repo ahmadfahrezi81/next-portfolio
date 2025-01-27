@@ -20,8 +20,8 @@ function Footer() {
     const [toggleShow, setToggleShow] = useState(false);
 
     return (
-        <OnLoadWrapperAnimate delay={4}>
-            <footer className="mb-10 mt-20">
+        <OnLoadWrapperAnimate delay={1}>
+            <footer className="mt-20 pb-8">
                 <div className="flex gap-5 ">
                     {/* <div className="p-6 flex rsm:flex-col gap-10 bg-[#787A91] bg-opacity-40 rounded-2xl justify-between"> */}
                     <div
@@ -35,10 +35,21 @@ function Footer() {
                             className="text-white absolute rmd:hidden top-16 right-14"
                             size={45}
                         />
-                        <Paragraph align="left" className="rmd:text-center">
+                        {/* <Paragraph align="left" className="rmd:text-center">
                             Have an exciting project in mind or just want to
                             talk?
                             <br className="rsm:hidden" /> Feel free to say hi!
+                        </Paragraph> */}
+                        <Paragraph
+                            align="left"
+                            className="rmd:text-center"
+                            font={"mono"}
+                        >
+                            Want to chat or collaborate on project.{" "}
+                            <br className="rsm:hidden" /> Email me at {email}{" "}
+                            <br className="rsm:hidden" />
+                            or message me on Linkedin.
+                            {/* <br className="rsm:hidden" /> Feel free to say hi! */}
                         </Paragraph>
                         <PressedWrapperAnimate>
                             {/* <CrispChatWrapper> */}
@@ -48,7 +59,7 @@ function Footer() {
                                 }
                                 aria-disabled="true"
                             >
-                                <Button className="mt-6">
+                                <Button className="">
                                     Say Hello
                                     <Icons.MessagesSquare
                                         className="ml-4"
@@ -119,13 +130,14 @@ function Footer() {
 
                         <div className="relative w-full h-10">
                             <Input
-                                disabled
-                                className="w-full h-fit pr-10"
+                                // disabled
+                                className="w-full h-fit pr-10 font-mono focus:outline-none focus:ring-0"
                                 readOnly
-                                value={toggleShow ? email : "●●●●●●●●●●●●●"}
+                                // value={toggleShow ? email : "●●●●●●●●●●●●●"}
+                                value={email}
                             />
 
-                            {toggleShow ? (
+                            {/* {toggleShow ? (
                                 <button>
                                     <Icons.EyeOff
                                         className="absolute top-2 right-3 cursor-pointer"
@@ -143,7 +155,7 @@ function Footer() {
                                         }
                                     />
                                 </button>
-                            )}
+                            )} */}
                         </div>
 
                         <PressedWrapperAnimate>
@@ -176,9 +188,13 @@ function Footer() {
                             />
                         </Link>
                     </PressedWrapperAnimate>
-                    <span className="text-sm">
+                    <Paragraph
+                        size={"sm"}
+                        className="rsm:text-center"
+                        font={"mono"}
+                    >
                         Copyright © 2023 by Ahmad Fahrezi
-                    </span>
+                    </Paragraph>
                 </div>
             </footer>
         </OnLoadWrapperAnimate>
