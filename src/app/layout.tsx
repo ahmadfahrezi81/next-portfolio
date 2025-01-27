@@ -5,6 +5,7 @@ import { Inter } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import { Toaster } from "@/components/ui/Toast";
 import { Analytics } from "@vercel/analytics/react";
+import OnLoadWrapperAnimate from "@/components/OnLoadWrapperAnimate";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -89,7 +90,9 @@ export default function RootLayout({
             <body
                 className={`${inter.className} mx-auto max-w-[1400px] rsm:px-4 rmd:px-8 rlg:px-12 px-24 bg-custom-blue`}
             >
-                <Navbar />
+                <OnLoadWrapperAnimate delay={0.1}>
+                    <Navbar />
+                </OnLoadWrapperAnimate>
 
                 <section className="mt-14 rsm:mt-12"> {children}</section>
 

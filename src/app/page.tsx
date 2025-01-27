@@ -33,21 +33,25 @@ export default async function Home() {
     return (
         <>
             <section className="flex flex-col items-center">
-                <OnLoadWrapperAnimate>
-                    <Paragraph className="mb-[-10]">Hello there 👋</Paragraph>
+                <OnLoadWrapperAnimate delay={0.2}>
+                    <Paragraph className="mb-[-10] " font={"mono"}>
+                        Hello there 👋
+                    </Paragraph>
+                </OnLoadWrapperAnimate>
+                <OnLoadWrapperAnimate delay={0.3}>
                     <LargeHeading className="mb-4">
                         My name is
                         <br />
                         Ahmad Fahrezi.
                     </LargeHeading>
                 </OnLoadWrapperAnimate>
-                <OnLoadWrapperAnimate delay={0.05}>
+                <OnLoadWrapperAnimate delay={0.4}>
                     <Paragraph className="flex items-center gap-1 justify-center">
                         <Icons.Globe2 /> <span>Kuala Lumpur, Malaysia</span>
                     </Paragraph>
                 </OnLoadWrapperAnimate>
 
-                <OnLoadWrapperAnimate delay={0.1}>
+                <OnLoadWrapperAnimate delay={0.5}>
                     <PressedWrapperAnimate>
                         <Link
                             href={

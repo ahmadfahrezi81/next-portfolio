@@ -20,7 +20,7 @@ function Footer() {
     const [toggleShow, setToggleShow] = useState(false);
 
     return (
-        <OnLoadWrapperAnimate delay={0.3}>
+        <OnLoadWrapperAnimate delay={4}>
             <footer className="mb-10 mt-20">
                 <div className="flex gap-5 ">
                     {/* <div className="p-6 flex rsm:flex-col gap-10 bg-[#787A91] bg-opacity-40 rounded-2xl justify-between"> */}
