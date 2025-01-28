@@ -84,8 +84,8 @@ export default async function Home() {
             </section>
             <section className="mt-12 flex flex-col gap-8">
                 <OnLoadWrapperAnimate delay={0.8}>
-                    <div className="bg-[#000] bg-opacity-30 p-2 rsm:p-3 rounded-[1.5rem] w-full  ">
-                        <div className="bg-custom-white rounded-[1rem] p-4">
+                    <div className="bg-[#000] bg-opacity-30 p-2 rsm:p-3 rounded-[1.5rem] rsm:rounded-[1rem] w-full  ">
+                        <div className="bg-custom-white rounded-[1rem] rsm:rounded-[0.5rem] p-4">
                             <ParallaxText
                                 baseVelocity={1}
                                 color={"blue"}
