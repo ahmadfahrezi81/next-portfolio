@@ -78,7 +78,7 @@ export default async function Home() {
                     <div className="bg-[#000] bg-opacity-30 p-2 rsm:p-3 rounded-[1.5rem] w-full  ">
                         <div className="bg-custom-white rounded-[1rem] p-4">
                             <ParallaxText
-                                baseVelocity={-1}
+                                baseVelocity={1}
                                 color={"blue"}
                                 className="font-mono"
                             >
