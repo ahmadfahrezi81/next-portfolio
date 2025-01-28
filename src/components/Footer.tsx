@@ -50,7 +50,8 @@ function Footer() {
                             font={"mono"}
                         >
                             Want to chat or collaborate on project.{" "}
-                            <br className="rsm:hidden" /> Email me at {email}{" "}
+                            <br className="rsm:hidden" /> Email me at{" "}
+                            <span className="underline">{email}</span>{" "}
                             <br className="rsm:hidden" />
                             or message me on Linkedin.
                             {/* <br className="rsm:hidden" /> Feel free to say hi! */}
@@ -169,8 +170,11 @@ function Footer() {
                                     e.preventDefault();
                                     navigator.clipboard.writeText(email);
                                     toast({
-                                        message: "Email copied to clipboard!",
+                                        title: "Email Copied 🥳",
+                                        message:
+                                            "Lookin' forward to hear from you!",
                                         type: "default",
+                                        duration: 3000,
                                     });
                                 }}
                                 className="inline-block border p-3 rounded-lg cursor-pointer"
