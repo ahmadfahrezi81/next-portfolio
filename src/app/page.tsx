@@ -10,6 +10,7 @@ import HeroCard from "@/components/HeroCard";
 import OnLoadWrapperAnimate from "@/components/OnLoadWrapperAnimate";
 import PressedWrapperAnimate from "@/components/PressedWrapperAnimate";
 import HeroCardWrapperAnimate from "@/components/HeroCardWrapperAnimate";
+import ParallaxText from "@/components/ParallaxText";
 
 const email = "ahmadfahrezi.kl@gmail.com";
 
@@ -32,7 +33,7 @@ export default async function Home() {
 
     return (
         <>
-            <section className="flex flex-col items-center">
+            <section className="flex flex-col items-center py-4">
                 <OnLoadWrapperAnimate delay={0.2}>
                     <Paragraph className="mb-[-10] " font={"mono"}>
                         Hello there 👋
@@ -72,11 +73,25 @@ export default async function Home() {
                     </PressedWrapperAnimate>
                 </OnLoadWrapperAnimate>
             </section>
-            <OnLoadWrapperAnimate delay={0.4}>
-                <section className="mt-20 flex flex-col gap-8">
-                    {/* hero main */}
+            <section className="mt-20 flex flex-col gap-8">
+                <OnLoadWrapperAnimate delay={0.8}>
+                    <div className="bg-[#000] bg-opacity-30 p-2 rsm:p-3 rounded-[1.5rem] w-full  ">
+                        <div className="bg-custom-white rounded-[1rem] p-4">
+                            <ParallaxText
+                                baseVelocity={-1}
+                                color={"blue"}
+                                className="font-mono"
+                            >
+                                HTML ⋅ CSS ⋅ JavaScript ⋅ Typescript ⋅ Vue ⋅
+                                React ⋅ NextJS ⋅ C ⋅ C++ ⋅ JQuery ⋅ NodeJS ⋅
+                                Express ⋅ Bootstrap ⋅ Tailwinds ⋅ Scss/Sass ⋅
+                                Java ⋅ Python ⋅ Firebase ⋅ MongoDB ⋅ Git ⋅ PHP ⋅
+                                RemixJS ⋅ GoLang ⋅
+                            </ParallaxText>
+                        </div>
+                    </div>
 
-                    <HeroCardWrapperAnimate>
+                    {/* <HeroCardWrapperAnimate>
                         <Link href={`/projects/${data[0].fields.slug}`}>
                             <div className="rounded-[2rem] bg-[#000] bg-opacity-30 p-12 pb-0 rlg:p-10 rlg:pb-0  rsm:p-7 rsm:pb-0">
                                 <Paragraph align="left" className="mb-0">
@@ -101,44 +116,76 @@ export default async function Home() {
                                 />
                             </div>
                         </Link>
-                    </HeroCardWrapperAnimate>
-
+                    </HeroCardWrapperAnimate> */}
+                    {/* 
                     <div className="flex flex-row gap-8 w-full rsm:flex-col">
-                        {/* hero 1 */}
                         <HeroCard data={data[1].fields} />
-
-                        {/* hero 2 */}
                         <HeroCard data={data[2].fields} />
-                    </div>
-                </section>
-                <section className="flex flex-col items-center">
+                    </div> */}
+                </OnLoadWrapperAnimate>
+            </section>
+            <section className="flex flex-col items-center">
+                <OnLoadWrapperAnimate delay={1}>
                     <LargeHeading className="mt-[8rem] mb-6">
                         Notable Projects.
                     </LargeHeading>
                     <Paragraph className="mb-10">
                         Here are some other fun projects I&apos;ve created.
                     </Paragraph>
-                    {/* <Paragraph className="mb-10">
-                        Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum
-                        dolor sit amet consectetur ipsum dolor sit amet
-                        consectetur.
-                    </Paragraph> */}
-                    {/* <div className="flex flex-row gap-6 w-full rsm:flex-col"> */}
-                    <div className="grid grid-cols-3 gap-8 rlg:grid-cols-2 rsm:grid-cols-1">
+                    <HeroCardWrapperAnimate>
+                        <Link href={`/projects/${data[0].fields.slug}`}>
+                            <div className="rounded-[1.5rem] rsm:rounded-[1rem] bg-[#000] bg-opacity-30 p-12 pb-0 rlg:p-10 rlg:pb-0  rsm:p-7 rsm:pb-0">
+                                <Paragraph
+                                    align="left"
+                                    className="mb-0"
+                                    font={"mono"}
+                                >
+                                    {data[0].fields.location}
+                                </Paragraph>
+                                <LargeHeading
+                                    align="left"
+                                    size="md"
+                                    className="mb-8 rlg:mb-4"
+                                >
+                                    {data[0].fields.title}
+                                </LargeHeading>
+                                <Image
+                                    src={
+                                        "https:" +
+                                        data[0].fields.thumbnail.fields.file.url
+                                    }
+                                    priority={true}
+                                    width={1200}
+                                    height={400}
+                                    alt="card image"
+                                />
+                            </div>
+                        </Link>
+                    </HeroCardWrapperAnimate>
+
+                    <div className="mt-8 grid grid-cols-3 gap-8 rsm:grid-cols-1">
+                        <HeroCard data={data[0].fields} />
+                        <HeroCard data={data[1].fields} />
+                        <HeroCard data={data[2].fields} />
                         <HeroCard data={data[3].fields} />
                         <HeroCard data={data[4].fields} />
                         <HeroCard data={data[5].fields} />
                     </div>
-                    <PressedWrapperAnimate>
-                        <Link href="/projects">
-                            <Button className="mt-[3rem] text-base">
-                                View Full Project Archive
-                                <Icons.ArrowRight className="ml-2" size={20} />
-                            </Button>
-                        </Link>
-                    </PressedWrapperAnimate>
-                </section>
-            </OnLoadWrapperAnimate>
+                    <div className="flex justify-center ">
+                        <PressedWrapperAnimate>
+                            <Link href="/projects">
+                                <Button className="mt-[3rem] text-base">
+                                    View Full Project Archive
+                                    <Icons.ArrowRight
+                                        className="ml-2"
+                                        size={20}
+                                    />
+                                </Button>
+                            </Link>
+                        </PressedWrapperAnimate>
+                    </div>
+                </OnLoadWrapperAnimate>
+            </section>
         </>
     );
 }
