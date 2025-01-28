@@ -50,9 +50,9 @@ export default async function Home() {
                         className="text-center !text-lg rsm:!text-base"
                         font={"mono"}
                     >
-                        Software Engineer, Designer, and Computer Science
-                        Student 🧑‍💻. <br className="rsm:hidden" /> I built mobile
-                        app, web app, and things that I find interesting.
+                        Software Engineer, Designer, Computer Science Student
+                        🧑‍💻. <br className="rsm:hidden" /> I built mobile app,
+                        web app, and things that I find interesting.
                     </Paragraph>
                 </OnLoadWrapperAnimate>
                 {/* <OnLoadWrapperAnimate delay={0.4}>
