@@ -98,7 +98,7 @@ html {
     font-weight: 700;
     text-transform: uppercase;
     opacity: 0.95;
-    font-size: 42px;
+    font-size: 45px;
     display: flex;
     white-space: nowrap;
     display: flex;
@@ -107,7 +107,7 @@ html {
 
 @media (max-width: 639px) {
     .parallax .scroller {
-        font-size: 25px;
+        font-size: 27px;
     }
 }
 
