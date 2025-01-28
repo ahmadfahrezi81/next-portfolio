@@ -10,7 +10,7 @@ module.exports = {
     theme: {
         fontFamily: {
             sans: ["Inter", "ui-sans-serif", "system-ui"],
-            serif: ["Georgia", "ui-serif", "serif"],
+            serif: ["Playfair Display", "ui-serif", "serif"],
             mono: ["Menlo", "ui-monospace", "monospace"],
         },
         screens: {
@@ -105,10 +105,19 @@ module.exports = {
                     from: { height: "var(--radix-accordion-content-height)" },
                     to: { height: 0 },
                 },
+                wave: {
+                    "0%": { transform: "rotate(0deg)" },
+                    "20%": { transform: "rotate(14deg)" },
+                    "40%": { transform: "rotate(-8deg)" },
+                    "60%": { transform: "rotate(14deg)" },
+                    "80%": { transform: "rotate(-4deg)" },
+                    "100%": { transform: "rotate(0deg)" },
+                },
             },
             animation: {
                 "accordion-down": "accordion-down 0.2s ease-out",
                 "accordion-up": "accordion-up 0.2s ease-out",
+                wave: "wave 2s infinite",
             },
         },
     },

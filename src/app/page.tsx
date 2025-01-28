@@ -33,10 +33,11 @@ export default async function Home() {
 
     return (
         <>
-            <section className="flex flex-col items-center py-4">
+            <section className="flex flex-col items-center py-2">
                 <OnLoadWrapperAnimate delay={0.2}>
-                    <Paragraph className="mb-[-10] " font={"mono"}>
-                        Hello there 👋
+                    <Paragraph className="mb-[-10]" font={"mono"}>
+                        Hello there!{" "}
+                        <span className="inline-block animate-wave ">👋</span>
                     </Paragraph>
                 </OnLoadWrapperAnimate>
                 <OnLoadWrapperAnimate delay={0.3}>
@@ -45,12 +46,17 @@ export default async function Home() {
                         <br />
                         Ahmad Fahrezi.
                     </LargeHeading>
+                    <Paragraph className="text-center !text-lg" font={"mono"}>
+                        Software Engineer, Designer, and Computer Science
+                        Student 🧑‍💻. <br /> I built mobile app, web app, and
+                        things that I find interesting.
+                    </Paragraph>
                 </OnLoadWrapperAnimate>
-                <OnLoadWrapperAnimate delay={0.4}>
+                {/* <OnLoadWrapperAnimate delay={0.4}>
                     <Paragraph className="flex items-center gap-1 justify-center">
                         <Icons.Globe2 /> <span>Kuala Lumpur, Malaysia</span>
                     </Paragraph>
-                </OnLoadWrapperAnimate>
+                </OnLoadWrapperAnimate> */}
 
                 <OnLoadWrapperAnimate delay={0.5}>
                     <PressedWrapperAnimate>
@@ -73,7 +79,7 @@ export default async function Home() {
                     </PressedWrapperAnimate>
                 </OnLoadWrapperAnimate>
             </section>
-            <section className="mt-20 flex flex-col gap-8">
+            <section className="mt-12 flex flex-col gap-8">
                 <OnLoadWrapperAnimate delay={0.8}>
                     <div className="bg-[#000] bg-opacity-30 p-2 rsm:p-3 rounded-[1.5rem] w-full  ">
                         <div className="bg-custom-white rounded-[1rem] p-4">
@@ -124,9 +130,9 @@ export default async function Home() {
                     </div> */}
                 </OnLoadWrapperAnimate>
             </section>
-            <section className="flex flex-col items-center">
+            <section className="mt-20 flex flex-col items-center">
                 <OnLoadWrapperAnimate delay={1}>
-                    <LargeHeading className="mt-[8rem] mb-6">
+                    <LargeHeading className="mb-6">
                         Notable Projects.
                     </LargeHeading>
                     <Paragraph className="mb-10">

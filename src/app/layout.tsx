@@ -23,6 +23,12 @@ export default function RootLayout({
     return (
         <html lang="en">
             <head>
+                {/* Fonts */}
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Inter&family=Menlo:wght@400&family=Playfair+Display:wght@400;700&display=swap"
+                    rel="stylesheet"
+                ></link>
+
                 {/* icons on all devices */}
                 <link
                     rel="apple-touch-icon"
