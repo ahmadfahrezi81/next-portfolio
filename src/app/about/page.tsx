@@ -28,12 +28,14 @@ export default async function page() {
     return (
         <>
             <OnLoadWrapperAnimate>
-                <Paragraph className="mb-[-10]">Hello, my name is</Paragraph>
+                <Paragraph className="mb-[-10]" font={"mono"}>
+                    Hello, my name is
+                </Paragraph>
                 <LargeHeading className="mb-14">Ahmad Fahrezi.</LargeHeading>
             </OnLoadWrapperAnimate>
 
             <OnLoadWrapperAnimate delay={0.05}>
-                <section className="flex rmd:flex-col items-center mb-10 gap-20 rmd:gap-10 mt-10 sm:justify-center">
+                <section className="flex rmd:flex-col items-center mb-10 gap-16 rmd:gap-10 mt-10 sm:justify-center">
                     <div className="bg-[#000] bg-opacity-30 p-3 rsm:p-3 rounded-2xl w-fit">
                         <Image
                             src={Profile}
@@ -47,27 +49,31 @@ export default async function page() {
                         <LargeHeading
                             size="md"
                             align="left"
-                            className="rmd:text-center"
+                            className="rmd:text-center flex gap-2 items-center"
                         >
-                            Coding for Mobile & Web. 🧑‍💻
+                            Building for Web, Mobile{" "}
+                            <span className="font-serif"> & Beyond</span>
+                            <Icons.Rocket color="#FFCA3B" size={35} />
                         </LargeHeading>
                         <Paragraph
                             align="left"
-                            className="rmd:text-center max-w-[480px]"
+                            className="rmd:text-center max-w-[600px]"
                         >
-                            Hello! I&apos;m a software developer focused on
-                            transforming ideas into digital solutions. I
-                            specialize in intuitive web interfaces and mobile
-                            experiences, blending creativity and technical
-                            skill.
+                            Hey there! I’m Ahmad—a developer who loves turning
+                            ambitious ideas into reality. Whether it’s crafting
+                            sleek web apps, intuitive mobile experiences, or
+                            diving into automation and AI, I’m all about
+                            building cool, impactful things.
                         </Paragraph>
                         <Paragraph
                             align="left"
-                            className="rmd:text-center max-w-[490px]"
+                            className="rmd:text-center max-w-[600px]"
                         >
-                            I&apos;m passionate about using technology to solve
-                            problems. Let&apos;s create impactful digital
-                            products together!
+                            From designing seamless user interfaces to
+                            experimenting with AI-driven automation, I thrive on
+                            blending creativity with technical skill. If it’s
+                            innovative, challenging, and pushes boundaries—I’m
+                            in.
                         </Paragraph>
                     </div>
                 </section>

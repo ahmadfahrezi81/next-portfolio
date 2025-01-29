@@ -6,6 +6,7 @@ import Paragraph from "./ui/Paragraph";
 import Image from "next/image";
 import LargeHeading from "@/ui/LargeHeading";
 import HeroCardWrapperAnimate from "@/components/HeroCardWrapperAnimate";
+import Icons from "./Icons";
 
 function HeroCard({ data }: any) {
     return (
@@ -14,11 +15,12 @@ function HeroCard({ data }: any) {
                 <div className="w-full flex-1 rounded-[1.5rem] rsm:rounded-[1rem] bg-[#000] bg-opacity-30 p-10 pb-0 pr-0 rlg:p-10 rlg:pb-0 rlg:pr-0 rsm:p-7 rsm:pb-0 rsm:pr-0">
                     <Paragraph
                         align="left"
-                        className="mb-0"
+                        className="mb-0 flex justify-between pr-8"
                         font={"mono"}
                         size={"sm"}
                     >
                         {data.location}
+                        <Icons.Code2 color="#FFCA3B" />
                     </Paragraph>
                     <LargeHeading
                         align="left"

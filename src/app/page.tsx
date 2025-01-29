@@ -172,9 +172,9 @@ export default async function Home() {
                         </Link>
                     </HeroCardWrapperAnimate> */}
 
-                    <div className="mt-8 grid grid-cols-3 gap-8 rsm:grid-cols-1">
-                        <HeroCard data={data[0].fields} />
+                    <div className="mt-8 grid grid-cols-3 gap-8 rsm:grid-cols-1 rlg:grid-cols-2">
                         <HeroCard data={data[1].fields} />
+                        <HeroCard data={data[0].fields} />
                         <HeroCard data={data[2].fields} />
                         <HeroCard data={data[3].fields} />
                         <HeroCard data={data[4].fields} />

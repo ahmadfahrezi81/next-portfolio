@@ -45,6 +45,9 @@ import {
     EyeOff,
     Squirrel,
     Trees,
+    MonitorSmartphone,
+    Code2,
+    Rocket,
 } from "lucide-react";
 
 export const Icons = {
@@ -93,6 +96,9 @@ export const Icons = {
     Copy,
     ExternalLink,
     X,
+    MonitorSmartphone,
+    Code2,
+    Rocket,
     logo: (props: LucideProps) => (
         <svg {...props} viewBox="0 0 497 497">
             <g>
