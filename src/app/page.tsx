@@ -141,7 +141,7 @@ export default async function Home() {
                     <Paragraph className="mb-10">
                         Here are some other fun projects I&apos;ve created.
                     </Paragraph>
-                    <HeroCardWrapperAnimate>
+                    {/* <HeroCardWrapperAnimate>
                         <Link href={`/projects/${data[0].fields.slug}`}>
                             <div className="rounded-[1.5rem] rsm:rounded-[1rem] bg-[#000] bg-opacity-30 p-12 pb-0 rlg:p-10 rlg:pb-0  rsm:p-7 rsm:pb-0">
                                 <Paragraph
@@ -170,7 +170,7 @@ export default async function Home() {
                                 />
                             </div>
                         </Link>
-                    </HeroCardWrapperAnimate>
+                    </HeroCardWrapperAnimate> */}
 
                     <div className="mt-8 grid grid-cols-3 gap-8 rsm:grid-cols-1">
                         <HeroCard data={data[0].fields} />
