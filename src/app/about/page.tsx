@@ -49,29 +49,23 @@ export default async function page() {
                         <LargeHeading
                             size="md"
                             align="left"
-                            className="rmd:text-center flex gap-2 items-center self-center"
+                            className="rmd:text-center flex gap-2 items-center rmd:self-center"
                         >
-                            Building for Web, Mobile & Beyond
+                            Web, Mobile & Beyond
                             <Icons.Rocket
                                 color="#FFCA3B"
                                 size={35}
                                 className="rsm:hidden"
                             />
                         </LargeHeading>
-                        <Paragraph
-                            align="left"
-                            className="rmd:text-center max-w-[600px]"
-                        >
+                        <Paragraph align="left" className=" max-w-[520px]">
                             Hey there! I’m Ahmad—a developer who loves turning
                             ambitious ideas into reality. Whether it’s crafting
                             sleek web apps, intuitive mobile experiences, or
                             diving into automation and AI, I’m all about
                             building cool, impactful things.
                         </Paragraph>
-                        <Paragraph
-                            align="left"
-                            className="rmd:text-center max-w-[600px]"
-                        >
+                        <Paragraph align="left" className="max-w-[520px]">
                             From designing seamless user interfaces to
                             experimenting with AI-driven automation, I thrive on
                             blending creativity with technical skill. If it’s
