@@ -51,7 +51,7 @@ export default async function Home() {
                         font={"mono"}
                     >
                         Software Engineer, Designer, Computer Science Student
-                        🧑‍💻. <br className="rsm:hidden" /> I built mobile app,
+                        🧑‍💻. <br className="rmd:hidden" /> I built mobile app,
                         web app, and things that I find interesting.
                     </Paragraph>
                 </OnLoadWrapperAnimate>

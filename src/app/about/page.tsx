@@ -35,7 +35,7 @@ export default async function page() {
             </OnLoadWrapperAnimate>
 
             <OnLoadWrapperAnimate delay={0.05}>
-                <section className="flex rmd:flex-col items-center mb-10 gap-16 rmd:gap-10 mt-10 sm:justify-center">
+                <section className="flex rlg:flex-col items-center mb-10 gap-16 rmd:gap-10 mt-10 sm:justify-center">
                     <div className="bg-[#000] bg-opacity-30 p-3 rsm:p-3 rounded-2xl w-fit">
                         <Image
                             src={Profile}
@@ -49,11 +49,14 @@ export default async function page() {
                         <LargeHeading
                             size="md"
                             align="left"
-                            className="rmd:text-center flex gap-2 items-center"
+                            className="rmd:text-center flex gap-2 items-center self-center"
                         >
-                            Building for Web, Mobile{" "}
-                            <span className="font-serif"> & Beyond</span>
-                            <Icons.Rocket color="#FFCA3B" size={35} />
+                            Building for Web, Mobile & Beyond
+                            <Icons.Rocket
+                                color="#FFCA3B"
+                                size={35}
+                                className="rsm:hidden"
+                            />
                         </LargeHeading>
                         <Paragraph
                             align="left"
