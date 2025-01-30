@@ -137,7 +137,7 @@ export default async function page() {
                                             align="left"
                                             className="text-custom-blue mb-0"
                                         >
-                                            Resume
+                                            Ahmad Fahrezi's Resume
                                         </Paragraph>
                                         <Paragraph
                                             align="left"

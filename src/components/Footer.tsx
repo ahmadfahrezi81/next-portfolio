@@ -201,7 +201,7 @@ function Footer() {
                         className="rsm:text-center"
                         font={"mono"}
                     >
-                        Copyright © 2023 by Ahmad Fahrezi
+                        Copyright © 2025 by Ahmad Fahrezi
                     </Paragraph>
                 </div>
             </footer>
